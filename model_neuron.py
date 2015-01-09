@@ -20,9 +20,10 @@ class Neuron:
     'E_syn': 0,\
     't_max': .07,\
     'dt': .0001,\
-    'I_e': 0\
+    'I_e': 0,\
+    'threshold': -.055\
     }
-
+    
     def __init__(self, projections):
         # setting class parameters
         self.projections = projections
@@ -38,12 +39,22 @@ class Neuron:
     def dV_dt(self,v, params):
         tau_m = params['tau_m']
         E_m = params['E_m']
+        E_K = params['E_K']
         R_m = params['R_m']
         I_e = params['I_e']
         t  = params['t']
+        g_K = params['g_K']
+        threshold = params['threshold']
+            
+        g_K = self.eulerstep(self.gK,g_K,self.params)        
+        I_K = g_K*(v-E_K)        
         
-        return (-v + E_m - R_m * self.I_syn(v, t, params) + R_m * I_e) / tau_m
+        return (-v + E_m - R_m * self.I_syn(v, t, params) + R_m * I_e - I_K) / tau_m
     
+    def gK(self, g_K, params):
+        tau_K = params['tau_K']
+        return -g_K/tau_K
+        
     def I_syn(self,v, t, params):
         E_syn = params['E_syn']
         
