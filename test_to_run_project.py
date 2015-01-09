@@ -7,7 +7,7 @@ Created on Fri Jan  9 10:15:00 2015
 import model_neuron
 import matplotlib.pyplot as plt
 
-N = 10000
+N = 1000
 
 neuron1 = model_neuron.Neuron(3)
 neuron1.set_external_current(1e-8)

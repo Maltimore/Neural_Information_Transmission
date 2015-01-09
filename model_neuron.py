@@ -20,9 +20,12 @@ class Neuron:
     'E_syn': 0,\
     't_max': .07,\
     'dt': .0001,\
-    'I_e': 0\
+    'I_e': 0,\
+    'threshold': -.055\
     }
-
+    
+    remaining_refractory = 0 # remaining absolute refractory period
+    
     def __init__(self, projections):
         # setting class parameters
         self.projections = projections
@@ -53,11 +56,23 @@ class Neuron:
         return g_max * t / tau_syn * np.exp(-t/tau_syn)
         
     def update(self):
+        print(self.remaining_refractory)
+        # check whether the neuron is in absolute refractory period, then set input currents to zero
+        if self.remaining_refractory > 0:
+            self.remaining_refractory -= self.params['dt'] # update remaining refractory
+            self.params['I_e'] = 0                         # set input to zero
+            print(self.remaining_refractory)
         self.params['V'] = self.eulerstep(self.dV_dt,self.params['V'],self.params)
+        
+        if self.params['V'] > self.params['threshold']:
+            self.remaining_refractory = self.params['refractory_p']
+            
         
     def get_voltage(self):
         return self.params['V']
         
     def set_external_current(self,new_Ie):
         self.params['I_e'] = new_Ie
-        
+    
+    def get_external_current(self):
+        return self.params['I_e']
