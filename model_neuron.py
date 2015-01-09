@@ -15,7 +15,7 @@ class Neuron:
     'tau_syn': 0.01,\
     'R_m': 10**7,\
     'g_max': 5e-8,\
-    'g_K': 36,\
+    'g_K': 36e-9,\
     'E_K': -.077,\
     'E_syn': 0,\
     't_max': .07,\
@@ -47,7 +47,6 @@ class Neuron:
         I_e = params['I_e']
         t  = params['t']
         g_K = params['g_K']
-        threshold = params['threshold']
             
         g_K = self.eulerstep(self.gK,g_K,self.params)        
         I_K = g_K*(v-E_K)        
@@ -67,12 +66,11 @@ class Neuron:
         return g_max * t / tau_syn * np.exp(-t/tau_syn)
         
     def update(self):
-        print(self.remaining_refractory)
         # check whether the neuron is in absolute refractory period, then set input currents to zero
         if self.remaining_refractory > 0:
             self.remaining_refractory -= self.params['dt'] # update remaining refractory
             self.params['I_e'] = 0                         # set input to zero
-            print(self.remaining_refractory)
+            
         self.params['V'] = self.eulerstep(self.dV_dt,self.params['V'],self.params)
         
         if self.params['V'] > self.params['threshold']:
