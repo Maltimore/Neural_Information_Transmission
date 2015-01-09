@@ -1,1 +1,4 @@
+# Hier koennen wir angeben, welche git per default nicht mit git status
+# anzeigen soll bzw. die mit git add --all nicht mit gestaged werden.
+
 *.pyc
