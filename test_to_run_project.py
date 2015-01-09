@@ -6,6 +6,8 @@ Created on Fri Jan  9 10:15:00 2015
 """
 import model_neuron
 import matplotlib.pyplot as plt
+import numpy as np
+
 
 N = 1000
 
