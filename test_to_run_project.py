@@ -8,7 +8,7 @@ import model_neuron
 import matplotlib.pyplot as plt
 import numpy as np
 
-N = 100
+N = 400
 
 neuron1 = model_neuron.Neuron(3)
 neuron1.set_external_current(1e-8)
