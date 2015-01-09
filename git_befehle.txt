@@ -1,0 +1,50 @@
+Eine Liste mit nuetzlichen git Befehlen
+
+
+git add <datei>                           - eine datei zu git hinzufuegen (in anderen worten, fuer
+					    naechsten commit vormerken) (fachsprache: "stagen")
+
+git add --all				  - alles was im ordner ist stagen
+
+git reset				  - alle gestageden dateien unstagen
+
+git reset -- <datei>			  - eine bestimmte datei unstagen
+
+git status				  - zeigt an, welche dateien beim naechsten commit commited
+					    werden wuerden (gestaged sind), und welche noch nicht zu
+					    git hinzugefuegt wurden (nicht gestaged)
+
+git commit -m '<Beschreibung des commits>'- einen commit machen
+
+git push origin master                    - alles was man momentan hat zu github pushen,
+					    origin ist dabei der servername (die URL),
+					    master ist der name des branches (auf dem server)
+					    in den gepusht werden soll.
+
+git fetch origin                          - laedt alle dateien (inklusive commit history etc.) vom 
+					    server runter und speichert sie lokal (auf deinem Rechner) ab.
+
+git merge origin/master			  - nimmt den mit git fetch origin runtergeladenen branch und
+					    merged ihn in den branch den du aktuell offen hast (wer nicht
+					    mit verschiedenen branches arbeitet, bei dem ist dies immer
+					    der lokale master branch. Aufpassen: in dem Befehl git merge 
+					    origin/master ist der master branch von origin (also der server)
+					    gemeint, nicht der lokale master branch. Es gibt also mind.
+					    zwei master branches, das ist verwirrend.
+
+git pull 				  - nicht benutzen bitte. git pull macht das gleiche wie die 
+					    Kombination aus git fetch und git merge. Lieber die beiden
+					    Befehle nutzen.
+
+
+
+
+
+## Hier kommen die komplizierteren Befehle die ihr (hoffentlich) nicht braucht. Die Liste ist noch nicht fertig.
+
+git branch				  - zeigt an, welche branches es gibt und was der aktuell offene ist
+
+git checkout -b <neuer_branchname>	  - erstellt einen neuen branch mit namen <neuer_branchname> und 
+					    wechselt sofort in diesen.
+
+git checkout <name_eines_branches>	  - wechselt in den angegebenen branch (dieser muss existieren)
