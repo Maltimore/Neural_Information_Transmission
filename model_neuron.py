@@ -39,7 +39,7 @@ class Neuron:
     def eulerstep(self,f_func, startvalue, params):
         return startvalue + f_func(startvalue, self.params) * params['dt']
         
-    def dV_dt(self,v, params):
+    def dV_dt(self,V, params):
         tau_m = params['tau_m']
         E_m = params['E_m']
         E_K = params['E_K']
@@ -49,18 +49,18 @@ class Neuron:
         g_K = params['g_K']
             
         g_K = self.eulerstep(self.gK,g_K,self.params)        
-        I_K = g_K*(v-E_K)        
+        I_K = g_K*(V-E_K)        
         
-        return (-v + E_m - R_m * self.I_syn(v, t, params) + R_m * I_e - I_K) / tau_m
+        return (-V + E_m - R_m * self.I_syn(V, t, params) + R_m * I_e - I_K) / tau_m
     
     def gK(self, g_K, params):
         tau_K = params['tau_K']
         return -g_K/tau_K
         
-    def I_syn(self,v, t, params):
+    def I_syn(self,V, t, params):
         E_syn = params['E_syn']
         
-        return self.g_syn(t, params['g_max'], params['tau_syn']) * (v - E_syn)
+        return self.g_syn(t, params['g_max'], params['tau_syn']) * (V - E_syn)
     
     def g_syn(self,t, g_max, tau_syn):
         return g_max * t / tau_syn * np.exp(-t/tau_syn)
