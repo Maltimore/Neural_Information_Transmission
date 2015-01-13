@@ -33,14 +33,16 @@ class Neuron:
         'threshold': -.055,\
         'dt': dt\
         }
-        I_mu = 3e-10
-        sigma = 10e-7
-        tau_noise = .5
+        self.I_mu = 6e-10
+        self.sigma = 10e-7
+        self.tau_noise = .005
         self.postsynaptic_neurons = []
         self.input_neuron_numbers = []
         self.this_neurons_number = neuronnumber
-        self.noiseobj = noise.Noise(I_mu, dt, tau_noise, sigma)
+        self.noiseobj = noise.Noise(self.I_mu, dt, self.tau_noise, self.sigma)
         self.synapse_list = []
+        self.t = 0
+        self.number_of_spikes = 0
         
     # This is the Euler step function, which will only compute one 
     # next timestep, therefore it is rather slim.
@@ -146,6 +148,11 @@ class Neuron:
         if self.params['V'] > self.params['threshold']:
             self.remaining_refractory = self.params['refractory_p']
             self.fire()
+            self.number_of_spikes += 1
+            
+        if self.remaining_refractory == 0:
+            for synapse in self.synapse_list:
+                synapse.enable()
             
         # check whether the neuron is in absolute refractory period, then set input currents to zero   
         if self.remaining_refractory > 0:
@@ -156,4 +163,11 @@ class Neuron:
             synapse.update()
             
         self.params['V'] = self.eulerstep(self.dV_dt,self.params['V'],self.params)
-          
+        self.t += self.params['dt']
+        
+    def get_firing_rate(self):
+        return self.number_of_spikes / self.t
+        
+    def set_I_mu(self, I):
+        self.I_mu = I
+        self.noiseobj = noise.Noise(self.I_mu, self.params['dt'], self.tau_noise, self.sigma)

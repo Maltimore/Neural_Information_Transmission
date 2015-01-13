@@ -23,6 +23,9 @@ class Synapse:
     
     def disable(self):
         self.disabled = 1
+    
+    def enable(self):
+        self.disabled = 0
         
     def g_syn_dt(self,t, g_max, tau_syn):
         return float(self.g_max) * t / self.tau_syn * np.exp(-t/self.tau_syn)

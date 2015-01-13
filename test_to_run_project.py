@@ -10,7 +10,7 @@ import numpy as np
 
 
 N = 5000
-n_neurons = 10
+n_neurons = 1
 my_linewidth = .3
 dt = .0001
 
@@ -44,7 +44,7 @@ for i in np.arange(N):
     j = 0
 
 
-for i in np.arange(2,n_neurons):
+for i in np.arange(n_neurons):
     
     plt.plot(np.linspace(0,N/10,N),volt_matrix[i], linewidth = my_linewidth)
 
@@ -54,3 +54,26 @@ plt.ylabel('voltage [V]')
 #plt.plot(volt_matrix[0], linewidth = .5)
 #plt.plot(volt_matrix[1], linewidth = .5)
 #plt.plot(volt_matrix[4], linewidth = .5)
+
+N = 100000
+# find best I_mu
+I_mu = np.arange(2.7e-10,2.74e-10,1e-13)
+firing_rate = np.empty(len(I_mu))
+
+
+i = 0
+for I in I_mu:
+    testneuron = model_neuron.Neuron(0,dt)
+    testneuron.set_input_connections([],1)
+    testneuron.set_I_mu(I)
+    
+    for j in np.arange(N):
+        testneuron.update()
+    
+    firing_rate[i] = testneuron.get_firing_rate()
+    i += 1
+
+plt.figure()
+plt.plot(I_mu, firing_rate)
+plt.xlabel('I_mu [A]')
+plt.ylabel('Firing rate [Hz]')
