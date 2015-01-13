@@ -9,9 +9,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-N = 1000
-n_neurons = 20
-my_linewidth = .1
+N = 5000
+n_neurons = 10
+my_linewidth = .3
+dt = .0001
 
 
 volt_matrix = np.empty((n_neurons, N))
@@ -23,17 +24,18 @@ neuronlist = []
 
 # create neurons
 for i in np.arange(n_neurons):
-    neuronlist.append(model_neuron.Neuron(i))
-    
+    neuronlist.append(model_neuron.Neuron(i, dt))
+
+i = 0
 for neuron in neuronlist:
-    neuron.set_input_connections(np.arange(0,n_neurons),np.ones((n_neurons)))
-    neuron.set_output_connections(neuronlist[:2])
+    neuron.set_input_connections([],np.ones((n_neurons)))
+    i += 1
 
 j = 0
 for i in np.arange(N):
     for neuron in neuronlist:
         
-        neuron.set_external_current(np.random.random() * 3e-10)
+#        neuron.set_external_current(3e-10)
         
         neuron.update()
         
@@ -42,9 +44,10 @@ for i in np.arange(N):
     j = 0
 
 
-for i in np.arange(n_neurons):
+for i in np.arange(2,n_neurons):
     
     plt.plot(volt_matrix[i], linewidth = my_linewidth)
-    
-plt.plot(volt_matrix[0], linewidth = 1)
-plt.plot(volt_matrix[4], linewidth = 1)
+
+#plt.plot(volt_matrix[0], linewidth = .5)
+#plt.plot(volt_matrix[1], linewidth = .5)
+#plt.plot(volt_matrix[4], linewidth = .5)
