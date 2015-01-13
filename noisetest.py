@@ -9,9 +9,9 @@ import matplotlib.pyplot as plt
 import noise
 
 tau_OUP = .5
-sigma = 10**-9
+sigma = 10**-6
 
-dt = 0.1
+dt = 0.0001
 
 Imu = 0
 noise1 = noise.Noise(Imu,dt,tau_OUP,sigma)

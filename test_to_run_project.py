@@ -46,7 +46,10 @@ for i in np.arange(N):
 
 for i in np.arange(2,n_neurons):
     
-    plt.plot(volt_matrix[i], linewidth = my_linewidth)
+    plt.plot(np.linspace(0,N/10,N),volt_matrix[i], linewidth = my_linewidth)
+
+plt.xlabel('time [ms]')
+plt.ylabel('voltage [V]')
 
 #plt.plot(volt_matrix[0], linewidth = .5)
 #plt.plot(volt_matrix[1], linewidth = .5)
