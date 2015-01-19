@@ -9,20 +9,22 @@ import numpy as np
 class Synapse:
     'This is the synapse class that models postsynaptic synapses'
     
-    def __init__(self, g_max, tau_syn, dt, E_syn):
+    def __init__(self, g_max, tau_syn, dt):
         self.t = 0
         self.g_max = g_max
         self.tau_syn = tau_syn
-        self.E_syn = E_syn
+        self.E_syn = 0 # Volt
         self.dt = dt
         self.disabled = 1
     
     def start(self):
         self.t = 0
         self.disabled = 0
+
     
     def disable(self):
         self.disabled = 1
+
     
     def enable(self):
         self.disabled = 0
@@ -37,5 +39,5 @@ class Synapse:
             return self.g_syn_dt(self.t, self.g_max, self.tau_syn) * (V - self.E_syn)
         
     def update(self):
-        self.t = self.t + self.dt
+        self.t += self.dt
         
