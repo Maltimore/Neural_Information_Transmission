@@ -1,4 +1,4 @@
-# This is the code for the neuron object! Not so much here yet :)
+# This is the code for the neuron object.
 
 import numpy as np
 import model_synapse
@@ -18,7 +18,7 @@ class Neuron:
         'tau_m': .01,\
         'tau_syn': 0.001,\
         'R_m': 10e7,\
-        'g_max': 5e-10,\
+        'g_max': 4e-10,\
         'g_K': 0,\
         'E_K': -.077,\
         'E_syn': 0,\

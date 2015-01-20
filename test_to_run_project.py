@@ -11,33 +11,54 @@ import numpy as np
 
 #####################################
 # Set constant variables
-N = 5000
-n_neurons = 50
+N_timesteps = 300
+N_per_group = 100
+N_groups    = 3
+N_neurons   = N_per_group * N_groups
+input_spikes = 50
 my_linewidth = .2
 dt = .0001
 
 #####################################
 # Create some vectors and matrices
-volt_matrix = np.empty((n_neurons, N))
-voltage_vec = np.empty(N)
+volt_matrix = np.empty((N_neurons, N_timesteps))
+voltage_vec = np.empty(N_timesteps)
 neuronlist = []
 
 #####################################
-# create neurons
-for i in np.arange(n_neurons):
-    neuronlist.append(model_neuron.Neuron(i, dt))
+# FUNCTIONS    
+def organizeNeurons(N_per_group, N_groups):   
+    neuronlist = []
     
-#####################################
-# set output connections
-i = 0
-for neuron in neuronlist:
-    neuron.set_output_connections([neuronlist[0]])
-    i += 1
+    # create neurons
+    for i in np.arange(N_per_group * N_groups):
+        neuronlist.append(model_neuron.Neuron(i, dt))
+    
+    # set output connections
+    i = 0
+    for k in np.arange(N_groups-1):       
+        outputvec = neuronlist[ (k+1)*N_per_group  :  (k+2)*N_per_group ]
+        
+        for l in np.arange(N_per_group):
+            neuronlist[i].set_output_connections(outputvec)
+            i += 1
+            
+    return neuronlist
+    
+def give_initial_input(neuronlist, N_per_group, synchronization, N_spikes):
+    for i in np.arange(N_spikes):
+        artificial_input_neuron = model_neuron.Neuron(-i, dt)
+        artificial_input_neuron.set_output_connections(neuronlist[0:N_per_group])
+        artificial_input_neuron.fire()
 
 #####################################
 # Run simulation
+
+neuronlist = organizeNeurons(N_per_group,N_groups)
+give_initial_input(neuronlist, N_per_group, 0, input_spikes)
+
 j = 0
-for i in np.arange(N):
+for i in np.arange(N_timesteps):
     for neuron in neuronlist:
         neuron.update()
         volt_matrix[j,i] = neuron.get_voltage()
@@ -46,10 +67,8 @@ for i in np.arange(N):
 
 # Plot Voltage for all simulated neurons
 plt.figure()
-for i in np.arange(n_neurons):    
-    plt.plot(np.linspace(0,N/10,N),volt_matrix[i], linewidth = my_linewidth)
-
-plt.plot(np.linspace(0,N/10,N), volt_matrix[0], linewidth = 2)
+for i in np.arange(N_neurons):    
+    plt.plot(np.linspace(0,N_timesteps/10,N_timesteps),volt_matrix[i], linewidth = my_linewidth)
 plt.xlabel('time [ms]')
 plt.ylabel('voltage [V]')
 
