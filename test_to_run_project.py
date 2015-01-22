@@ -72,6 +72,22 @@ def calculate_output_properties():
         k+=1
     return spikes_in_group, variance_in_group
 
+def rasterplot():
+    fig = plt.figure()
+    spikes = np.zeros((N_neurons,N_timesteps))
+    for i in range(N_neurons):
+        for j in range(len(neuronlist[i].spiketime)):
+            spikes[i][j] = neuronlist[i].spiketime[j]*1000 
+            ax = plt.gca()
+    for ith, trial in enumerate(spikes):
+        plt.vlines(trial, ith + .5, ith + 1.5, color='k')
+        plt.ylim(.5, len(spikes) + .5) 
+    ax.invert_yaxis()
+    plt.title('Raster plot')
+    plt.xlabel('time [ms]')
+    plt.ylabel('number of neuron')
+    plt.xlim(0,70)
+    fig.show()
  
 #####################################
 # Run simulation
@@ -95,6 +111,8 @@ plt.xlabel('time [ms]')
 plt.ylabel('voltage [V]')
 
 a_out, sig_out=calculate_output_properties()
+
+rasterplot()
 
 ############### CODE TO FIND PARAMTERS ################################
 #test_timesteps = 200
