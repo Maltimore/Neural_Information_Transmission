@@ -11,11 +11,11 @@ import numpy as np
 
 #####################################
 # Set constant variables
-N_timesteps = 700
+N_timesteps = 500
 N_per_group = 100
-N_groups    = 10
+N_groups    = 4
 N_neurons   = N_per_group * N_groups
-input_spikes = 48
+input_spikes = 50
 my_linewidth = .2
 dt = .0001
 
@@ -52,9 +52,10 @@ def give_initial_input(neuronlist, N_per_group, synchronization, N_spikes):
         artificial_input_neuron.fire()
 
 def rasterplot():
-    eventmatrix = np.empty((N_neurons,N_timesteps))
+    eventmatrix = np.zeros((N_neurons,N_timesteps))
     for i in range(N_neurons):
-        eventmatrix[i] = neuronlist[i].eventlist
+        for j in range(len(neuronlist[i].spiketime)):
+            eventmatrix[i][neuronlist[i].spiketime[j]/dt] = 1
     plt.figure()
     plt.xlabel('timestep')
     plt.ylabel('neuron number')
