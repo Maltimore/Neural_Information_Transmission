@@ -1,6 +1,5 @@
 # This is the code for the neuron object.
 
-import numpy as np
 import model_synapse
 import noise
 
@@ -11,14 +10,13 @@ class Neuron:
         # setting class parameters
         self.params = {\
         'V': -.058,\
-        't': 0,\
         'E_m': -.07,\
         'total_refractory_period': .001,\
         'tau_K': .015,\
         'tau_m': .01,\
-        'tau_syn': 0.001,\
+        'tau_syn': 0.000335,\
         'R_m': 10e7,\
-        'g_max': 4e-10,\
+        'g_max': 6.99e-10,\
         'g_K': 0,\
         'E_K': -.077,\
         'E_syn': 0,\
@@ -33,7 +31,7 @@ class Neuron:
         self.postsynaptic_neurons = []
         self.input_neuron_numbers = []
         self.this_neurons_number = neuronnumber
-        self.eventlist = []
+        self.spiketime = []
         self.noiseobj = noise.Noise(self.I_mu, dt, self.tau_noise, self.sigma)
         self.synapse_list = []
         self.t = 0
@@ -86,8 +84,8 @@ class Neuron:
         # increment total number of spikes of this neuron
         self.number_of_spikes += 1
         
-        # store event in a list
-        self.eventlist.append(1)
+        # store spike time in list
+        self.spiketime.append(self.t)
         
         # set refractory period
         self.remaining_refractory = self.params['total_refractory_period']
@@ -113,8 +111,6 @@ class Neuron:
         # check whether in this timestep the neuron crossed firing threshold
         if self.params['V'] > self.params['threshold']:
             self.fire()
-        else:
-            self.eventlist.append(0)
             
         # update remaining refractory period  
         if self.remaining_refractory > 0:
@@ -127,6 +123,7 @@ class Neuron:
         # last but not least, compute new voltage and update time
         self.params['V'] = self.eulerstep(self.dV_dt,self.params['V'],self.params)
         self.t += self.params['dt']
+        
 
 
 ###################################################################################################
