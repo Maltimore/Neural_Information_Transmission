@@ -11,14 +11,13 @@ class Noise:
     def __init__(self,Imu,dt,tau_OUP,sigma):
         # setting class parameters
         self.step = 0
-        self.I = []
+        self.I = [Imu]
         self.sigma = sigma
         self.tau_OUP = tau_OUP
         self.dt = dt
         self.Imu = Imu
     
     def get_noise(self):
-        self.I.append(self.Imu)
         self.step += 1 
         
         self.I.append((self.I[self.step-1]+(self.Imu-self.I[self.step-1])/ \
