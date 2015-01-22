@@ -10,7 +10,7 @@ class Neuron:
     def __init__(self, neuronnumber, dt):
         # setting class parameters
         self.params = {\
-        'V': -.07,\
+        'V': -.058,\
         't': 0,\
         'E_m': -.07,\
         'total_refractory_period': .001,\
@@ -194,3 +194,9 @@ class Neuron:
     
     def get_input_synapses(self):
         return self.synapse_list
+        
+    def set_tau_syn(self, new_tau_syn):
+        self.params['tau_syn'] = new_tau_syn
+        
+    def set_g_syn(self, new_g_syn):
+        self.params['g_max'] = new_g_syn
