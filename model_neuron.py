@@ -33,6 +33,7 @@ class Neuron:
         self.postsynaptic_neurons = []
         self.input_neuron_numbers = []
         self.this_neurons_number = neuronnumber
+        self.eventlist = []
         self.noiseobj = noise.Noise(self.I_mu, dt, self.tau_noise, self.sigma)
         self.synapse_list = []
         self.t = 0
@@ -85,6 +86,9 @@ class Neuron:
         # increment total number of spikes of this neuron
         self.number_of_spikes += 1
         
+        # store event in a list
+        self.eventlist.append(1)
+        
         # set refractory period
         self.remaining_refractory = self.params['total_refractory_period']
         
@@ -109,6 +113,8 @@ class Neuron:
         # check whether in this timestep the neuron crossed firing threshold
         if self.params['V'] > self.params['threshold']:
             self.fire()
+        else:
+            self.eventlist.append(0)
             
         # update remaining refractory period  
         if self.remaining_refractory > 0:

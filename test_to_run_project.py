@@ -11,11 +11,11 @@ import numpy as np
 
 #####################################
 # Set constant variables
-N_timesteps = 300
+N_timesteps = 700
 N_per_group = 100
-N_groups    = 3
+N_groups    = 10
 N_neurons   = N_per_group * N_groups
-input_spikes = 50
+input_spikes = 48
 my_linewidth = .2
 dt = .0001
 
@@ -47,9 +47,18 @@ def organizeNeurons(N_per_group, N_groups):
     
 def give_initial_input(neuronlist, N_per_group, synchronization, N_spikes):
     for i in np.arange(N_spikes):
-        artificial_input_neuron = model_neuron.Neuron(-i, dt)
+        artificial_input_neuron = model_neuron.Neuron(-(i+1), dt)
         artificial_input_neuron.set_output_connections(neuronlist[0:N_per_group])
         artificial_input_neuron.fire()
+
+def rasterplot():
+    eventmatrix = np.empty((N_neurons,N_timesteps))
+    for i in range(N_neurons):
+        eventmatrix[i] = neuronlist[i].eventlist
+    plt.figure()
+    plt.xlabel('timestep')
+    plt.ylabel('neuron number')
+    plt.imshow(eventmatrix,cmap='gray_r')
 
 #####################################
 # Run simulation
@@ -68,9 +77,11 @@ for i in np.arange(N_timesteps):
 # Plot Voltage for all simulated neurons
 plt.figure()
 for i in np.arange(N_neurons):    
-    plt.plot(np.linspace(0,N_timesteps/10,N_timesteps),volt_matrix[i], linewidth = my_linewidth)
+    plt.plot(np.linspace(0,N_timesteps*dt*1000,N_timesteps),volt_matrix[i], linewidth = my_linewidth)
 plt.xlabel('time [ms]')
 plt.ylabel('voltage [V]')
+
+rasterplot()
 
 
 #N = 100000
