@@ -20,7 +20,7 @@ class Noise:
     def get_noise(self):
         self.step += 1 
         
-        self.I.append((self.I[self.step-1]+(self.Imu-self.I[self.step-1])/ \
+        self.I.append(self.I[self.step-1]+((self.Imu-self.I[self.step-1])/ \
         self.tau_OUP+self.sigma*np.random.normal(loc=0.0,scale=1.0))*self.dt)
                 
         return self.I[self.step]

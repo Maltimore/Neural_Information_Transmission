@@ -25,8 +25,8 @@ class Neuron:
         'threshold': -.055,\
         'dt': dt\
         }
-        self.I_mu = 2.703e-10
-        self.sigma = 10e-7
+        self.I_mu = 8.988e-11
+        self.sigma = 1e-7
         self.tau_noise = .005
         self.postsynaptic_neurons = []
         self.input_neuron_numbers = []
@@ -146,9 +146,8 @@ class Neuron:
         return self.number_of_spikes / self.t
 
         
-    def set_I_mu(self, I):
-        self.I_mu = I
-        self.noiseobj = noise.Noise(self.I_mu, self.params['dt'], self.tau_noise, self.sigma)
+    def set_I_mu(self, Imu, sigma):
+        self.noiseobj = noise.Noise(Imu, self.params['dt'], self.tau_noise, sigma)
 
     
     def switch_noise_on(self):
