@@ -11,17 +11,17 @@ import numpy as np
 
 #####################################
 # Set constant variables
-N_timesteps = 700
+N_timesteps = 200
 N_per_group = 100
-N_groups    = 10
+N_groups    = 3
 N_neurons   = N_per_group * N_groups
-input_spikes = 50
+input_spikes = 90
+input_synchronisation = 3
 my_linewidth = .2
 dt = .0001
 
 #####################################
 # Create some vectors and matrices
-volt_matrix = np.empty((N_neurons, N_timesteps))
 voltage_vec = np.empty(N_timesteps)
 neuronlist = []
 
@@ -44,12 +44,6 @@ def organizeNeurons(N_per_group, N_groups):
             i += 1
             
     return neuronlist
-    
-def give_initial_input(neuronlist, N_per_group, synchronization, N_spikes):
-    for i in np.arange(N_spikes):
-        artificial_input_neuron = model_neuron.Neuron(-(i+1), dt)
-        artificial_input_neuron.set_output_connections(neuronlist[0:N_per_group])
-        artificial_input_neuron.fire()
 
     
 #Calculate number of output spike and its variance
@@ -88,20 +82,56 @@ def rasterplot():
     plt.ylabel('number of neuron')
     plt.xlim(0,70)
     fig.show()
+    
+def simulate(N_timesteps, neuronlist, initial_spike_neurons, initial_spike_times):
+    N_neurons = len(neuronlist)
+    volt_matrix = np.empty((N_neurons, N_timesteps))
+    current_artificial_neuron = 0
+    
+    j = 0
+    for i in np.arange(N_timesteps):
+        current_timestep = i * dt
+        inputspikes_this_timestep = len(initial_spike_times[initial_spike_times == current_timestep])
+        if  inputspikes_this_timestep != 0:
+            for k in np.arange(inputspikes_this_timestep):
+                initial_spike_neurons[current_artificial_neuron].fire()
+                current_artificial_neuron += 1
+                
+        for neuron in neuronlist:
+            neuron.update()
+            volt_matrix[j,i] = neuron.get_voltage()
+            j += 1
+        j = 0
+        
+    return volt_matrix
+    
+def get_artificial_neurons(neuronlist, N_per_group, synchronization, N_spikes):
+    artificial_neuron_list = []    
+    for i in np.arange(N_spikes):
+        artificial_input_neuron = model_neuron.Neuron(-(i+1), dt)
+        artificial_input_neuron.set_output_connections(neuronlist[0:N_per_group])
+        artificial_neuron_list.append(artificial_input_neuron)
+    
+    if synchronization == 0:
+        initial_spike_times = np.zeros((N_spikes))
+        return artificial_neuron_list, initial_spike_times
+        
+    if synchronization != 0:    
+        initial_spike_times = np.random.normal(scale = synchronization, size = N_spikes)
+        initial_spike_times = np.round(initial_spike_times, decimals = 1)
+        initial_spike_times = initial_spike_times  - np.amin(initial_spike_times)
+        initial_spike_times = initial_spike_times / 1000
+        return artificial_neuron_list, initial_spike_times
+    
+
  
 #####################################
 # Run simulation
 
 neuronlist = organizeNeurons(N_per_group,N_groups)
-give_initial_input(neuronlist, N_per_group, 0, input_spikes)
+artificial_neurons, initial_spike_times = get_artificial_neurons(neuronlist, N_per_group, input_synchronisation, input_spikes)
+volt_matrix = simulate(N_timesteps, neuronlist, artificial_neurons, initial_spike_times)
 
-j = 0
-for i in np.arange(N_timesteps):
-    for neuron in neuronlist:
-        neuron.update()
-        volt_matrix[j,i] = neuron.get_voltage()
-        j += 1
-    j = 0
 
 # Plot Voltage for all simulated neurons
 plt.figure()
@@ -112,7 +142,7 @@ plt.ylabel('voltage [V]')
 
 a_out, sig_out=calculate_output_properties()
 
-rasterplot()
+#rasterplot()
 
 ############### CODE TO FIND PARAMTERS ################################
 #test_timesteps = 200
