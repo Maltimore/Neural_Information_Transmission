@@ -195,7 +195,7 @@ a_out, sig_out=calculate_output_properties()
 #ax.ticklabel_format(useOffset=False)
 #plt.xlabel('time in [ms]')
 #plt.ylabel('voltage in [mV]')
-
+#
 #N = 100000
 ## find best I_mu
 #I_mu = np.arange(2.7e-10,2.74e-10,1e-13)
@@ -205,7 +205,6 @@ a_out, sig_out=calculate_output_properties()
 #i = 0
 #for I in I_mu:
 #    testneuron = model_neuron.Neuron(0,dt)
-#    testneuron.set_input_connections([],1)
 #    testneuron.set_I_mu(I)
 #    
 #    for j in np.arange(N):
