@@ -11,12 +11,12 @@ import numpy as np
 
 #####################################
 # Set constant variables
-N_timesteps = 200
+N_timesteps = 700
 N_per_group = 100
-N_groups    = 3
+N_groups    = 10
 N_neurons   = N_per_group * N_groups
-input_spikes = 90
-input_synchronisation = 3
+input_spikes = 35
+input_synchronisation = 0
 my_linewidth = .2
 dt = .0001
 
@@ -142,7 +142,7 @@ plt.ylabel('voltage [V]')
 
 a_out, sig_out=calculate_output_properties()
 
-#rasterplot()
+rasterplot()
 
 ############### CODE TO FIND PARAMTERS ################################
 #test_timesteps = 200

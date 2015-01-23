@@ -9,10 +9,10 @@ class Neuron:
     def __init__(self, neuronnumber, dt):
         # setting class parameters
         self.params = {\
-        'V': -.058,\
+        'V': -.057,\
         'E_m': -.07,\
         'total_refractory_period': .001,\
-        'tau_K': .015,\
+        'tau_K': .005,\
         'tau_m': .01,\
         'tau_syn': 0.000335,\
         'R_m': 10e7,\
@@ -23,10 +23,11 @@ class Neuron:
         't_max': .07,\
         'I_e': 0,\
         'threshold': -.055,\
-        'dt': dt\
+        'dt': dt,\
+        'g_K_add_term': 5e-9\
         }
-        self.I_mu = 8.988e-11
-        self.sigma = 1e-7
+        self.I_mu = 8.45e-11
+        self.sigma = 1.15e-7
         self.tau_noise = .005
         self.postsynaptic_neurons = []
         self.input_neuron_numbers = []
@@ -100,7 +101,7 @@ class Neuron:
         
         # reset Voltage to -.07 Volt and increase K-conductance
         self.params['V'] = -.07
-        self.params['g_K'] = self.params['g_K'] + 36e-9
+        self.params['g_K'] = self.params['g_K'] + self.params['g_K_add_term']
         
 
 
