@@ -12,9 +12,9 @@ import numpy as np
 def overallfunction(input_spikes1,sigma):
     #####################################
     # Set constant variables
-    N_timesteps = 700
+    N_timesteps = 200
     N_per_group = 100
-    N_groups    = 5
+    N_groups    = 2
     N_neurons   = N_per_group * N_groups
     input_spikes = input_spikes1
     input_synchronisation = sigma
@@ -98,20 +98,20 @@ def overallfunction(input_spikes1,sigma):
         for i in np.arange(N_timesteps):
             
             current_timestep = i * dt
-            print current_timestep
-            # naechste zeile spaeter loeschen
-    #        inputspikes_this_timestep = len(initial_spike_times[initial_spike_times == current_timestep])
+            if i % 50 == 0:
+                print "Current timestep: " + str(current_timestep)
             
-            while ((current_timestep <= initial_spike_times[current_artificial_neuron]) and (initial_spike_times[current_artificial_neuron] <= current_timestep + dt)):
-                
-                print i, current_artificial_neuron
-                print 'Neuron ' + str(current_artificial_neuron) + ' fired at ' + str(current_timestep) + ' its spike time was: ' + str(initial_spike_times[current_artificial_neuron])
-                
-                initial_spike_neurons[current_artificial_neuron].fire()
-                if current_artificial_neuron < len(initial_spike_times)-1:
-                    current_artificial_neuron += 1
-                else:
-                    break
+            # check whether initial spike times is an array
+            # and therefore the user is not asking for zero input spikes
+            if isinstance(initial_spike_times, list) == True:
+                while ((current_timestep <= initial_spike_times[current_artificial_neuron]) and (initial_spike_times[current_artificial_neuron] <= current_timestep + dt)):
+                    print 'Neuron ' + str(current_artificial_neuron) + ' fired at ' + str(current_timestep) + ' its spike time was: ' + str(initial_spike_times[current_artificial_neuron])
+                    
+                    initial_spike_neurons[current_artificial_neuron].fire()
+                    if current_artificial_neuron < len(initial_spike_times)-1:
+                        current_artificial_neuron += 1
+                    else:
+                        break
                     
             for neuron in neuronlist:
                 neuron.update()
@@ -119,7 +119,8 @@ def overallfunction(input_spikes1,sigma):
                 j += 1
             j = 0
             
-        print str(current_artificial_neuron + 1) + ' initial input spikes were fired'
+        print "In the last simulation, " + str(current_artificial_neuron) + \
+        ' initial input spikes were fired'
         
         return volt_matrix
         
@@ -130,12 +131,15 @@ def overallfunction(input_spikes1,sigma):
             artificial_input_neuron.set_output_connections(neuronlist[0:N_per_group])
             artificial_neuron_list.append(artificial_input_neuron)
         
+        if N_spikes == 0:
+            print " ATTENTION! Zero input spikes were slected."
+            return 0, 0
         if synchronization == 0:
             initial_spike_times = np.zeros((N_spikes))
             return artificial_neuron_list, initial_spike_times
             
         if synchronization != 0:    
-            initial_spike_times = np.random.normal(scale = synchronization, size = N_spikes)     
+            initial_spike_times = np.random.normal(scale = synchronization, size = N_spikes)  
             initial_spike_times = initial_spike_times  - np.amin(initial_spike_times)
             initial_spike_times = initial_spike_times / 1000
             initial_spike_times = np.round(initial_spike_times, decimals = 4)
@@ -153,15 +157,15 @@ def overallfunction(input_spikes1,sigma):
     artificial_neurons, initial_spike_times = get_artificial_neurons(neuronlist, N_per_group, input_synchronisation, input_spikes)
     volt_matrix = simulate(N_timesteps, neuronlist, artificial_neurons, initial_spike_times)
     
-    plt.figure()
-    plt.hist(initial_spike_times)
+#    plt.figure()
+#    plt.hist(initial_spike_times)
     
     # Plot Voltage for all simulated neurons
-    plt.figure(figsize=(15,20))
-    for i in np.arange(N_neurons):    
-        plt.plot(np.linspace(0,N_timesteps*dt*1000,N_timesteps),volt_matrix[i], linewidth = my_linewidth)
-    plt.xlabel('time [ms]')
-    plt.ylabel('voltage [V]')
+#    plt.figure(figsize=(15,20))
+#    for i in np.arange(N_neurons):    
+#        plt.plot(np.linspace(0,N_timesteps*dt*1000,N_timesteps),volt_matrix[i], linewidth = my_linewidth)
+#    plt.xlabel('time [ms]')
+#    plt.ylabel('voltage [V]')
     
     #a_out, sig_out=calculate_output_properties()
     
@@ -172,7 +176,7 @@ def overallfunction(input_spikes1,sigma):
     
     return spikes, std
     
-
+anzahl_wertepaare = 4
 simsteps=2
 Outputs=np.zeros((simsteps+1,2*5))
 def phase_plane_plot(simsteps):
@@ -205,6 +209,10 @@ def phase_plane_plot(simsteps):
 
 Test=phase_plane_plot(simsteps)
 
+
+## plotting
+for i in np.arange(0,anzahl_wertepaare*2,2):
+    arrowplot(Test[:,i:i+2].T)
 
     ############### CODE TO FIND PARAMTERS ################################
     #test_timesteps = 200
