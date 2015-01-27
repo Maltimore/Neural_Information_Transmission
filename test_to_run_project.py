@@ -212,7 +212,8 @@ Test=phase_plane_plot(simsteps)
 
 
 ## plotting
-for i in np.arange(0,anzahl_wertepaare*2,2):
+for i in np.arange(0,anzahl_wertepaare*2-2,2):
+
     arrowplot(Test[:,i:i+2].T)
 
     ############### CODE TO FIND PARAMTERS ################################
