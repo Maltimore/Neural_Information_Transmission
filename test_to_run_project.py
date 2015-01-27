@@ -49,15 +49,10 @@ def overallfunction(input_spikes1,sigma):
         
     #Calculate number of output spike and its variance
     def calculate_output_properties(neuronlist):
-        eventmatrix = np.zeros((N_neurons,N_timesteps))
         spiketimematrix = np.zeros((N_neurons,N_timesteps))
         for i in range(N_neurons):
             for j in range(len(neuronlist[i].spiketime)):
-                eventmatrix[i][neuronlist[i].spiketime[j]/dt] = 1
-                spiketimematrix[i][neuronlist[i].spiketime[j]/dt] = neuronlist[i].spiketime[j]*1000
-        spikes_in_group=np.zeros(N_groups)
-        variance_in_group=np.zeros(N_groups)
-         
+                spiketimematrix[i][neuronlist[i].spiketime[j]/dt] = neuronlist[i].spiketime[j]*1000         
         
         i=N_groups-1
         startcutoff=N_groups*0.005
@@ -104,15 +99,15 @@ def overallfunction(input_spikes1,sigma):
             
             # check whether initial spike times is an array
             # and therefore the user is not asking for zero input spikes
-            if isinstance(initial_spike_times, list) == True:
-                while ((current_timestep <= initial_spike_times[current_artificial_neuron]) and (initial_spike_times[current_artificial_neuron] <= current_timestep + dt)):
-                    print 'Neuron ' + str(current_artificial_neuron) + ' fired at ' + str(current_timestep) + ' its spike time was: ' + str(initial_spike_times[current_artificial_neuron])
-                    
-                    initial_spike_neurons[current_artificial_neuron].fire()
-                    if current_artificial_neuron < len(initial_spike_times)-1:
-                        current_artificial_neuron += 1
-                    else:
-                        break
+#            if isinstance(initial_spike_times, list) == True:
+            while ((current_timestep <= initial_spike_times[current_artificial_neuron]) and (initial_spike_times[current_artificial_neuron] <= current_timestep + dt)):
+                print 'Neuron ' + str(current_artificial_neuron) + ' fired at ' + str(current_timestep) + ' its spike time was: ' + str(initial_spike_times[current_artificial_neuron])
+                
+                initial_spike_neurons[current_artificial_neuron].fire()
+                if current_artificial_neuron < len(initial_spike_times)-1:
+                    current_artificial_neuron += 1
+                else:
+                    break
                     
             for neuron in neuronlist:
                 neuron.update()
@@ -176,10 +171,11 @@ def overallfunction(input_spikes1,sigma):
     spikes, std = calculate_output_properties(neuronlist)
     
     return spikes, std
-    
-anzahl_wertepaare = 4
+
+startingvalues = [[60,0],[80,0],[60,2],[80,2]]
+number_startingvalues = len(startingvalues)
 simsteps=2
-Outputs=np.zeros((simsteps+1,2*5))
+Outputs=np.zeros((simsteps+1,2*number_startingvalues))
 def phase_plane_plot(simsteps):
 #    for spikes_in in np.linspace(60,100,3):
 #        for synch_in in np.linspace(0,3,5):
@@ -191,7 +187,7 @@ def phase_plane_plot(simsteps):
      k=0
      l=1
      #for spikes_in, synch_in in [[60,0],[80,0],[100,0],[60,2],[80,2],[100,2]]:
-     for spikes_in, synch_in in [[60,0],[80,0],[60,2],[80,2]]:
+     for spikes_in, synch_in in startingvalues:
 
          j=0
          spikes_out, synch_out = spikes_in, synch_in
@@ -212,7 +208,7 @@ Test=phase_plane_plot(simsteps)
 
 def arrowplot(array):
     for i in range(len(array)-1):
-        ax.arrow(array[i][0],array[i][1],array[i+1][0]-array[i][0],array[i+1][1]-array[i][1],fc='k',ec='k',\
+        ax.arrow(array[i][1],array[i][0],array[i+1][1]-array[i][1],array[i+1][0]-array[i][0],fc='k',ec='k',\
                  head_width=0.05, head_length=1, length_includes_head=True)
     plt.xlabel(r'$\sigma$ [ms]')
     plt.ylabel('a [spikes]')
@@ -223,9 +219,9 @@ def arrowplot(array):
 ## plotting
 ax = plt.axes()
 
-for i in np.arange(0,anzahl_wertepaare*2-2,2):
+for i in np.arange(0,number_startingvalues*2,2):
 
-    arrowplot(Test[:,i:i+2].T)
+    arrowplot(Test[:,i:i+2])
     
 plt.show()
 
