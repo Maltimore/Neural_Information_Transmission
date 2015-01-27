@@ -12,9 +12,9 @@ import numpy as np
 def overallfunction(input_spikes1,sigma):
     #####################################
     # Set constant variables
-    N_timesteps = 200
+    N_timesteps = 700
     N_per_group = 100
-    N_groups    = 2
+    N_groups    = 10
     N_neurons   = N_per_group * N_groups
     input_spikes = input_spikes1
     input_synchronisation = sigma
@@ -172,9 +172,14 @@ def overallfunction(input_spikes1,sigma):
     
     return spikes, std
 
-startingvalues = [[60,0],[80,0],[60,2],[80,2]]
+
+
+startingvalues =    [[30,0], [40,0], [50,0], [60,0], [70,0], [80,0], [90,0], [100,0],
+                     [30,3], [40,3], [50,3], [60,3], [70,3], [80,3], [90,3], [100,3],
+                     [100,0],[100,1],[100,2],[100,3]]
+                    
 number_startingvalues = len(startingvalues)
-simsteps=2
+simsteps=5
 Outputs=np.zeros((simsteps+1,2*number_startingvalues))
 def phase_plane_plot(simsteps):
 #    for spikes_in in np.linspace(60,100,3):
@@ -300,14 +305,9 @@ plt.show()
     #plt.ylabel('Firing rate [Hz]')
     
     # delete all objects
-#
-#import cPickle as pickle
-#import os.path
-#
-#simnr = 2
-#
-#variable2 = 1
-#
+
+
+
 #if os.path.exists('simulation%s.txt'%simnr):
 #    with open('simulation%s.txt'%simnr,'rb') as f:
 #        variable=pickle.load(f)
@@ -316,6 +316,8 @@ plt.show()
 #else:
 #    variable = []
 #    variable.append(variable2)
-#
-#with open('simulation%s.txt'%simnr,'wb') as f:
-#    pickle.dump(variable,f)
+
+import cPickle as pickle
+
+with open('simulation.txt','wb') as f:
+    pickle.dump(Test,f)
