@@ -172,42 +172,40 @@ def overallfunction(input_spikes1,sigma):
     
     return spikes, std
     
-    '''
-    simsteps=4
-    Bla=np.zeros((simsteps+1,2*5))
-    def phase_plane_plot(simsteps):
-    #    for spikes_in in np.linspace(60,100,3):
-    #        for synch_in in np.linspace(0,3,5):
-    #            neuronlist = organizeNeurons(N_per_group,N_groups)
-    #            artificial_neurons, initial_spike_times = get_artificial_neurons(neuronlist, N_per_group, synch_in, spikes_in)
-    #            volt_matrix = simulate(N_timesteps, neuronlist, artificial_neurons, initial_spike_times)
-    #            Bla.append(calculate_output_properties(neuronlist))
-    #    return Bla
-         k=0
-         l=1
-         for spikes_in in np.linspace(60,100,5):
-             j=0
-             spikes_out, synch_in = spikes_in, 0
-             Bla[0,k]= spikes_out
-             Bla[0,l]= synch_in
-             for i in range(simsteps):
-                j+=1
-                neuronlist = organizeNeurons(N_per_group,N_groups)
-                artificial_neurons, initial_spike_times = get_artificial_neurons(neuronlist, N_per_group, synch_in, spikes_in)
-                volt_matrix = simulate(N_timesteps, neuronlist, artificial_neurons, initial_spike_times)
-                spikes_out, synch_in=calculate_output_properties(neuronlist)
-               # Bla.append(np.array([spikes_out, synch_in]))       
-                Bla[j,k]=spikes_out
-                Bla[j,l]= synch_in
-                #j+=1
-             k+=2
-             l+=2
-         return Bla
-    
-    Test=phase_plane_plot(simsteps)
-    '''
-    
-    
+
+simsteps=2
+Outputs=np.zeros((simsteps+1,2*5))
+def phase_plane_plot(simsteps):
+#    for spikes_in in np.linspace(60,100,3):
+#        for synch_in in np.linspace(0,3,5):
+#            neuronlist = organizeNeurons(N_per_group,N_groups)
+#            artificial_neurons, initial_spike_times = get_artificial_neurons(neuronlist, N_per_group, synch_in, spikes_in)
+#            volt_matrix = simulate(N_timesteps, neuronlist, artificial_neurons, initial_spike_times)
+#            Outputs.append(calculate_output_properties(neuronlist))
+#    return Outputs
+     k=0
+     l=1
+     #for spikes_in, synch_in in [[60,0],[80,0],[100,0],[60,2],[80,2],[100,2]]:
+     for spikes_in, synch_in in [[60,0],[80,0],[60,2],[80,2]]:
+
+         j=0
+         spikes_out, synch_out = spikes_in, synch_in
+         Outputs[0,k]= spikes_out
+         Outputs[0,l]= synch_out
+         for i in range(simsteps):
+            j+=1
+            spikes_out, synch_out= overallfunction(spikes_out,synch_out)
+           # Outputs.append(np.array([spikes_out, synch_in]))       
+            Outputs[j,k]=spikes_out
+            Outputs[j,l]= synch_out
+            #j+=1
+         k+=2
+         l+=2
+     return Outputs
+
+Test=phase_plane_plot(simsteps)
+
+
     ############### CODE TO FIND PARAMTERS ################################
     #test_timesteps = 200
     #tau_syn_vec = np.linspace(.0001,.001,1000)
