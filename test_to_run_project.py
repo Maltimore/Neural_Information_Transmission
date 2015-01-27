@@ -4,6 +4,7 @@ Created on Fri Jan  9 10:15:00 2015
 
 @author: maltimore
 """
+
 import model_neuron
 import matplotlib.pyplot as plt
 import numpy as np
@@ -13,10 +14,10 @@ import numpy as np
 # Set constant variables
 N_timesteps = 700
 N_per_group = 100
-N_groups    = 10
+N_groups    = 5
 N_neurons   = N_per_group * N_groups
-input_spikes = 35
-input_synchronisation = 0
+input_spikes = 50
+input_synchronisation = 1
 my_linewidth = .2
 dt = .0001
 
@@ -90,12 +91,22 @@ def simulate(N_timesteps, neuronlist, initial_spike_neurons, initial_spike_times
     
     j = 0
     for i in np.arange(N_timesteps):
+        
         current_timestep = i * dt
-        inputspikes_this_timestep = len(initial_spike_times[initial_spike_times == current_timestep])
-        if  inputspikes_this_timestep != 0:
-            for k in np.arange(inputspikes_this_timestep):
-                initial_spike_neurons[current_artificial_neuron].fire()
+        print current_timestep
+        # naechste zeile spaeter loeschen
+#        inputspikes_this_timestep = len(initial_spike_times[initial_spike_times == current_timestep])
+        
+        while ((current_timestep <= initial_spike_times[current_artificial_neuron]) and (initial_spike_times[current_artificial_neuron] <= current_timestep + dt)):
+            
+            print i, current_artificial_neuron
+            print 'Neuron ' + str(current_artificial_neuron) + ' fired at ' + str(current_timestep) + ' its spike time was: ' + str(initial_spike_times[current_artificial_neuron])
+            
+            initial_spike_neurons[current_artificial_neuron].fire()
+            if current_artificial_neuron < len(initial_spike_times)-1:
                 current_artificial_neuron += 1
+            else:
+                break
                 
         for neuron in neuronlist:
             neuron.update()
@@ -103,6 +114,8 @@ def simulate(N_timesteps, neuronlist, initial_spike_neurons, initial_spike_times
             j += 1
         j = 0
         
+    print str(current_artificial_neuron + 1) + ' initial input spikes were fired'
+    
     return volt_matrix
     
 def get_artificial_neurons(neuronlist, N_per_group, synchronization, N_spikes):
@@ -117,10 +130,11 @@ def get_artificial_neurons(neuronlist, N_per_group, synchronization, N_spikes):
         return artificial_neuron_list, initial_spike_times
         
     if synchronization != 0:    
-        initial_spike_times = np.random.normal(scale = synchronization, size = N_spikes)
-        initial_spike_times = np.round(initial_spike_times, decimals = 1)
+        initial_spike_times = np.random.normal(scale = synchronization, size = N_spikes)     
         initial_spike_times = initial_spike_times  - np.amin(initial_spike_times)
         initial_spike_times = initial_spike_times / 1000
+        initial_spike_times = np.round(initial_spike_times, decimals = 4)
+        initial_spike_times = np.sort(initial_spike_times)
         return artificial_neuron_list, initial_spike_times
     
 
@@ -132,6 +146,8 @@ neuronlist = organizeNeurons(N_per_group,N_groups)
 artificial_neurons, initial_spike_times = get_artificial_neurons(neuronlist, N_per_group, input_synchronisation, input_spikes)
 volt_matrix = simulate(N_timesteps, neuronlist, artificial_neurons, initial_spike_times)
 
+plt.figure()
+plt.hist(initial_spike_times)
 
 # Plot Voltage for all simulated neurons
 plt.figure()
@@ -140,9 +156,31 @@ for i in np.arange(N_neurons):
 plt.xlabel('time [ms]')
 plt.ylabel('voltage [V]')
 
-a_out, sig_out=calculate_output_properties()
+#a_out, sig_out=calculate_output_properties()
 
 rasterplot()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ############### CODE TO FIND PARAMTERS ################################
 #test_timesteps = 200
@@ -217,3 +255,6 @@ rasterplot()
 #plt.plot(I_mu, firing_rate)
 #plt.xlabel('I_mu [A]')
 #plt.ylabel('Firing rate [Hz]')
+
+# delete all objects
+neuronlist = 0
