@@ -60,9 +60,10 @@ def overallfunction(input_spikes1,sigma):
          
         
         i=N_groups-1
-        cutofftime=0.05
+        startcutoff=N_groups*0.005
+        endcutoff=startcutoff + 0.015
         
-        hilf=spiketimematrix[(i)*N_per_group  :  (i+1)*N_per_group][:,cutofftime/dt:]
+        hilf=spiketimematrix[(i)*N_per_group  :  (i+1)*N_per_group][:,startcutoff/dt:endcutoff/dt]
         hilf=np.reshape(hilf,(np.shape(hilf)[0]*np.shape(hilf)[1]))
         hilf=hilf[hilf!=0.0]
         variance_in_group=(np.std(hilf))
