@@ -48,23 +48,28 @@ def organizeNeurons(N_per_group, N_groups):
 
     
 #Calculate number of output spike and its variance
-def calculate_output_properties():
+def calculate_output_properties(neuronlist):
     eventmatrix = np.zeros((N_neurons,N_timesteps))
     spiketimematrix = np.zeros((N_neurons,N_timesteps))
     for i in range(N_neurons):
         for j in range(len(neuronlist[i].spiketime)):
             eventmatrix[i][neuronlist[i].spiketime[j]/dt] = 1
-            spiketimematrix[i][neuronlist[i].spiketime[j]/dt] = neuronlist[i].spiketime[j]/dt
+            spiketimematrix[i][neuronlist[i].spiketime[j]/dt] = neuronlist[i].spiketime[j]*1000
     spikes_in_group=np.zeros(N_groups)
     variance_in_group=np.zeros(N_groups)
      
-    k=0
-    for  i in range (N_groups): 
-        spikes_in_group[k]=(np.sum(eventmatrix[(i)*N_per_group  :  (i+1)*N_per_group]))
-        hilf=spiketimematrix[(i)*N_per_group  :  (i+1)*N_per_group]
-        hilf=np.reshape(hilf,(np.shape(hilf)[0]*np.shape(hilf)[1]))
-        variance_in_group[k]=(np.std(np.trim_zeros(hilf)))
-        k+=1
+    
+    i=N_groups-1
+    cutofftime=0.05
+    
+    hilf=spiketimematrix[(i)*N_per_group  :  (i+1)*N_per_group][:,cutofftime/dt:]
+    hilf=np.reshape(hilf,(np.shape(hilf)[0]*np.shape(hilf)[1]))
+    hilf=hilf[hilf!=0.0]
+    variance_in_group=(np.std(hilf))
+    spikes_in_group=len(hilf)
+    
+   # return eventmatrix, spiketimematrix
+    #Return last group properties
     return spikes_in_group, variance_in_group
 
 def rasterplot():
@@ -141,7 +146,9 @@ def get_artificial_neurons(neuronlist, N_per_group, synchronization, N_spikes):
  
 #####################################
 # Run simulation
-
+ 
+  
+  
 neuronlist = organizeNeurons(N_per_group,N_groups)
 artificial_neurons, initial_spike_times = get_artificial_neurons(neuronlist, N_per_group, input_synchronisation, input_spikes)
 volt_matrix = simulate(N_timesteps, neuronlist, artificial_neurons, initial_spike_times)
@@ -150,7 +157,7 @@ plt.figure()
 plt.hist(initial_spike_times)
 
 # Plot Voltage for all simulated neurons
-plt.figure()
+plt.figure(figsize=(15,20))
 for i in np.arange(N_neurons):    
     plt.plot(np.linspace(0,N_timesteps*dt*1000,N_timesteps),volt_matrix[i], linewidth = my_linewidth)
 plt.xlabel('time [ms]')
@@ -161,25 +168,42 @@ plt.ylabel('voltage [V]')
 rasterplot()
 
 
+spikes, std = calculate_output_properties(neuronlist)
 
+'''
+simsteps=4
+Bla=np.zeros((simsteps+1,2*5))
+def phase_plane_plot(simsteps):
+#    for spikes_in in np.linspace(60,100,3):
+#        for synch_in in np.linspace(0,3,5):
+#            neuronlist = organizeNeurons(N_per_group,N_groups)
+#            artificial_neurons, initial_spike_times = get_artificial_neurons(neuronlist, N_per_group, synch_in, spikes_in)
+#            volt_matrix = simulate(N_timesteps, neuronlist, artificial_neurons, initial_spike_times)
+#            Bla.append(calculate_output_properties(neuronlist))
+#    return Bla
+     k=0
+     l=1
+     for spikes_in in np.linspace(60,100,5):
+         j=0
+         spikes_out, synch_in = spikes_in, 0
+         Bla[0,k]= spikes_out
+         Bla[0,l]= synch_in
+         for i in range(simsteps):
+            j+=1
+            neuronlist = organizeNeurons(N_per_group,N_groups)
+            artificial_neurons, initial_spike_times = get_artificial_neurons(neuronlist, N_per_group, synch_in, spikes_in)
+            volt_matrix = simulate(N_timesteps, neuronlist, artificial_neurons, initial_spike_times)
+            spikes_out, synch_in=calculate_output_properties(neuronlist)
+           # Bla.append(np.array([spikes_out, synch_in]))       
+            Bla[j,k]=spikes_out
+            Bla[j,l]= synch_in
+            #j+=1
+         k+=2
+         l+=2
+     return Bla
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Test=phase_plane_plot(simsteps)
+'''
 
 
 ############### CODE TO FIND PARAMTERS ################################
