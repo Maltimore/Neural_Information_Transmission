@@ -2,3 +2,5 @@
 # anzeigen soll bzw. die mit git add --all nicht mit gestaged werden.
 
 *.pyc
+*.txt
+*.log

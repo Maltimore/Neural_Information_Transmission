@@ -8,8 +8,18 @@ Created on Fri Jan  9 10:15:00 2015
 import model_neuron
 import matplotlib.pyplot as plt
 import numpy as np
+import sys
+import datetime
+
+
+# Here I define that all output will be written to a history file
+sys.stdout = open("History.log", "w")
 
 def overallfunction(input_spikes1,sigma):
+
+    print "Current time is: " + str(datetime.datetime.now())
+    print "RUNNING SIMULATION with n_spikes " + str(input_spikes1) \
+    + " and sigma " + str(sigma)
     #####################################
     # Set constant variables
     N_timesteps = 700
@@ -99,9 +109,8 @@ def overallfunction(input_spikes1,sigma):
             
             # check whether initial spike times is an array
             # and therefore the user is not asking for zero input spikes
-#            if isinstance(initial_spike_times, list) == True:
-            while ((current_timestep <= initial_spike_times[current_artificial_neuron]) and (initial_spike_times[current_artificial_neuron] <= current_timestep + dt)):
-                print 'Neuron ' + str(current_artificial_neuron) + ' fired at ' + str(current_timestep) + ' its spike time was: ' + str(initial_spike_times[current_artificial_neuron])
+            while ((current_timestep <= initial_spike_times[current_artificial_neuron]) \
+            and (initial_spike_times[current_artificial_neuron] <= current_timestep + dt)):
                 
                 initial_spike_neurons[current_artificial_neuron].fire()
                 if current_artificial_neuron < len(initial_spike_times)-1:
@@ -115,8 +124,11 @@ def overallfunction(input_spikes1,sigma):
                 j += 1
             j = 0
             
-        print "In the last simulation, " + str(current_artificial_neuron) + \
-        ' initial input spikes were fired'
+        if current_artificial_neuron == 0:
+            print "In the last simulation, 0 initial input spikes were fired"
+        else:
+            print "In the last simulation, " + str(current_artificial_neuron + 1) + \
+            ' initial input spikes were fired'
         
         return volt_matrix
         
@@ -138,7 +150,6 @@ def overallfunction(input_spikes1,sigma):
             initial_spike_times = np.random.normal(scale = synchronization, size = N_spikes)  
             initial_spike_times = initial_spike_times  - np.amin(initial_spike_times)
             initial_spike_times = initial_spike_times / 1000
-            initial_spike_times = np.round(initial_spike_times, decimals = 4)
             initial_spike_times = np.sort(initial_spike_times)
             return artificial_neuron_list, initial_spike_times
         
@@ -173,6 +184,7 @@ def overallfunction(input_spikes1,sigma):
     return spikes, std
 
 
+import cPickle as pickle
 
 startingvalues =    [[30,0], [40,0], [50,0], [60,0], [70,0], [80,0], [90,0], [100,0],
                      [30,3], [40,3], [50,3], [60,3], [70,3], [80,3], [90,3], [100,3],
@@ -181,14 +193,8 @@ startingvalues =    [[30,0], [40,0], [50,0], [60,0], [70,0], [80,0], [90,0], [10
 number_startingvalues = len(startingvalues)
 simsteps=5
 Outputs=np.zeros((simsteps+1,2*number_startingvalues))
+
 def phase_plane_plot(simsteps):
-#    for spikes_in in np.linspace(60,100,3):
-#        for synch_in in np.linspace(0,3,5):
-#            neuronlist = organizeNeurons(N_per_group,N_groups)
-#            artificial_neurons, initial_spike_times = get_artificial_neurons(neuronlist, N_per_group, synch_in, spikes_in)
-#            volt_matrix = simulate(N_timesteps, neuronlist, artificial_neurons, initial_spike_times)
-#            Outputs.append(calculate_output_properties(neuronlist))
-#    return Outputs
      k=0
      l=1
      #for spikes_in, synch_in in [[60,0],[80,0],[100,0],[60,2],[80,2],[100,2]]:
@@ -201,10 +207,12 @@ def phase_plane_plot(simsteps):
          for i in range(simsteps):
             j+=1
             spikes_out, synch_out= overallfunction(spikes_out,synch_out)
-           # Outputs.append(np.array([spikes_out, synch_in]))       
             Outputs[j,k]=spikes_out
             Outputs[j,l]= synch_out
-            #j+=1
+
+	 with open('Zwischenspeicherung.txt','wb') as f:
+	    pickle.dump(Outputs,f)
+
          k+=2
          l+=2
      return Outputs
