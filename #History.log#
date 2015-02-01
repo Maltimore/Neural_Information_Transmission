@@ -1,0 +1,1700 @@
+Current time is: 2015-01-28 13:07:32.818392
+RUNNING SIMULATION with n_spikes 30 and sigma 0
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 30 initial input spikes were fired
+Current time is: 2015-01-28 13:11:29.950468
+RUNNING SIMULATION with n_spikes 6 and sigma 4.56523700249
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 6 initial input spikes were fired
+Current time is: 2015-01-28 13:14:28.935365
+RUNNING SIMULATION with n_spikes 1 and sigma 0.0
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 0 initial input spikes were fired
+Current time is: 2015-01-28 13:17:30.693353
+RUNNING SIMULATION with n_spikes 2 and sigma 3.05
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 2 initial input spikes were fired
+Current time is: 2015-01-28 13:20:34.122788
+RUNNING SIMULATION with n_spikes 2 and sigma 5.35
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 2 initial input spikes were fired
+Current time is: 2015-01-28 13:23:34.286097
+RUNNING SIMULATION with n_spikes 40 and sigma 0
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 40 initial input spikes were fired
+Current time is: 2015-01-28 13:26:19.476903
+RUNNING SIMULATION with n_spikes 100 and sigma 0.945449628484
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 100 initial input spikes were fired
+Current time is: 2015-01-28 13:28:47.973350
+RUNNING SIMULATION with n_spikes 99 and sigma 0.795531341491
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 99 initial input spikes were fired
+Current time is: 2015-01-28 13:31:23.491727
+RUNNING SIMULATION with n_spikes 101 and sigma 0.920490741707
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 101 initial input spikes were fired
+Current time is: 2015-01-28 13:34:00.430642
+RUNNING SIMULATION with n_spikes 96 and sigma 0.662352577937
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 96 initial input spikes were fired
+Current time is: 2015-01-28 13:36:33.204823
+RUNNING SIMULATION with n_spikes 50 and sigma 0
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 50 initial input spikes were fired
+Current time is: 2015-01-28 13:39:04.954533
+RUNNING SIMULATION with n_spikes 99 and sigma 0.751300610193
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 99 initial input spikes were fired
+Current time is: 2015-01-28 13:41:36.630904
+RUNNING SIMULATION with n_spikes 98 and sigma 0.388035612822
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 98 initial input spikes were fired
+Current time is: 2015-01-28 13:44:10.452692
+RUNNING SIMULATION with n_spikes 97 and sigma 0.248703728317
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 97 initial input spikes were fired
+Current time is: 2015-01-28 13:46:39.303807
+RUNNING SIMULATION with n_spikes 100 and sigma 0.694682661364
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 100 initial input spikes were fired
+Current time is: 2015-01-28 13:49:07.379226
+RUNNING SIMULATION with n_spikes 60 and sigma 0
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 60 initial input spikes were fired
+Current time is: 2015-01-28 13:51:37.402031
+RUNNING SIMULATION with n_spikes 96 and sigma 0.691465834297
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 96 initial input spikes were fired
+Current time is: 2015-01-28 13:54:10.205115
+RUNNING SIMULATION with n_spikes 99 and sigma 1.31364325685
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 99 initial input spikes were fired
+Current time is: 2015-01-28 13:56:41.492874
+RUNNING SIMULATION with n_spikes 95 and sigma 0.566425346476
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 95 initial input spikes were fired
+Current time is: 2015-01-28 13:59:13.821678
+RUNNING SIMULATION with n_spikes 100 and sigma 0.778418910356
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 100 initial input spikes were fired
+Current time is: 2015-01-28 14:01:38.611652
+RUNNING SIMULATION with n_spikes 70 and sigma 0
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 70 initial input spikes were fired
+Current time is: 2015-01-28 14:04:13.473285
+RUNNING SIMULATION with n_spikes 94 and sigma 0.395578780143
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 94 initial input spikes were fired
+Current time is: 2015-01-28 14:06:36.265895
+RUNNING SIMULATION with n_spikes 100 and sigma 0.569824534396
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 100 initial input spikes were fired
+Current time is: 2015-01-28 14:09:02.549607
+RUNNING SIMULATION with n_spikes 98 and sigma 0.275736868212
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 98 initial input spikes were fired
+Current time is: 2015-01-28 14:11:27.674584
+RUNNING SIMULATION with n_spikes 98 and sigma 0.412124906764
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 98 initial input spikes were fired
+Current time is: 2015-01-28 14:13:55.865234
+RUNNING SIMULATION with n_spikes 80 and sigma 0
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 80 initial input spikes were fired
+Current time is: 2015-01-28 14:16:28.160958
+RUNNING SIMULATION with n_spikes 95 and sigma 0.730450473843
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 95 initial input spikes were fired
+Current time is: 2015-01-28 14:18:57.009205
+RUNNING SIMULATION with n_spikes 100 and sigma 0.918809555893
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 100 initial input spikes were fired
+Current time is: 2015-01-28 14:21:20.686510
+RUNNING SIMULATION with n_spikes 98 and sigma 0.299730894158
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 98 initial input spikes were fired
+Current time is: 2015-01-28 14:23:53.562680
+RUNNING SIMULATION with n_spikes 98 and sigma 0.873528989002
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 98 initial input spikes were fired
+Current time is: 2015-01-28 14:26:28.383321
+RUNNING SIMULATION with n_spikes 90 and sigma 0
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 90 initial input spikes were fired
+Current time is: 2015-01-28 14:28:58.572624
+RUNNING SIMULATION with n_spikes 97 and sigma 0.622163026671
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 97 initial input spikes were fired
+Current time is: 2015-01-28 14:31:38.070450
+RUNNING SIMULATION with n_spikes 92 and sigma 0.268986053848
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 92 initial input spikes were fired
+Current time is: 2015-01-28 14:33:59.037529
+RUNNING SIMULATION with n_spikes 97 and sigma 0.675477260294
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 97 initial input spikes were fired
+Current time is: 2015-01-28 14:36:30.403141
+RUNNING SIMULATION with n_spikes 98 and sigma 0.237544796187
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 98 initial input spikes were fired
+Current time is: 2015-01-28 14:38:59.228977
+RUNNING SIMULATION with n_spikes 100 and sigma 0
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 100 initial input spikes were fired
+Current time is: 2015-01-28 14:41:29.855021
+RUNNING SIMULATION with n_spikes 97 and sigma 0.569592993397
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 97 initial input spikes were fired
+Current time is: 2015-01-28 14:43:57.820860
+RUNNING SIMULATION with n_spikes 99 and sigma 0.811781928223
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 99 initial input spikes were fired
+Current time is: 2015-01-28 14:46:27.416305
+RUNNING SIMULATION with n_spikes 96 and sigma 0.845832691913
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 96 initial input spikes were fired
+Current time is: 2015-01-28 14:48:56.183900
+RUNNING SIMULATION with n_spikes 99 and sigma 0.659717377103
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 99 initial input spikes were fired
+Current time is: 2015-01-28 14:51:24.362820
+RUNNING SIMULATION with n_spikes 30 and sigma 3
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 30 initial input spikes were fired
+Current time is: 2015-01-28 14:55:03.413324
+RUNNING SIMULATION with n_spikes 5 and sigma 6.22298963522
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 5 initial input spikes were fired
+Current time is: 2015-01-28 14:58:17.686522
+RUNNING SIMULATION with n_spikes 8 and sigma 3.96980792986
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 8 initial input spikes were fired
+Current time is: 2015-01-28 15:01:27.898838
+RUNNING SIMULATION with n_spikes 3 and sigma 5.40637483799
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 3 initial input spikes were fired
+Current time is: 2015-01-28 15:04:27.723781
+RUNNING SIMULATION with n_spikes 3 and sigma 1.88384948679
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 3 initial input spikes were fired
+Current time is: 2015-01-28 15:07:29.018106
+RUNNING SIMULATION with n_spikes 40 and sigma 3
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 40 initial input spikes were fired
+Current time is: 2015-01-28 15:11:00.363820
+RUNNING SIMULATION with n_spikes 6 and sigma 2.35843639351
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 6 initial input spikes were fired
+Current time is: 2015-01-28 15:14:11.483073
+RUNNING SIMULATION with n_spikes 4 and sigma 3.32819395468
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 4 initial input spikes were fired
+Current time is: 2015-01-28 15:17:07.169364
+RUNNING SIMULATION with n_spikes 4 and sigma 2.62237964452
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 4 initial input spikes were fired
+Current time is: 2015-01-28 15:20:09.344347
+RUNNING SIMULATION with n_spikes 1 and sigma 0.0
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 0 initial input spikes were fired
+Current time is: 2015-01-28 15:23:17.366089
+RUNNING SIMULATION with n_spikes 50 and sigma 3
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 50 initial input spikes were fired
+Current time is: 2015-01-28 15:26:55.399509
+RUNNING SIMULATION with n_spikes 6 and sigma 4.07907941684
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 6 initial input spikes were fired
+Current time is: 2015-01-28 15:29:57.433896
+RUNNING SIMULATION with n_spikes 5 and sigma 3.73973261076
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 5 initial input spikes were fired
+Current time is: 2015-01-28 15:33:02.170486
+RUNNING SIMULATION with n_spikes 1 and sigma 0.0
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 0 initial input spikes were fired
+Current time is: 2015-01-28 15:36:08.559706
+RUNNING SIMULATION with n_spikes 10 and sigma 3.448608415
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 10 initial input spikes were fired
+Current time is: 2015-01-28 15:39:13.883354
+RUNNING SIMULATION with n_spikes 60 and sigma 3
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 60 initial input spikes were fired
+Current time is: 2015-01-28 15:42:57.391023
+RUNNING SIMULATION with n_spikes 4 and sigma 4.66924779809
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 4 initial input spikes were fired
+Current time is: 2015-01-28 15:45:55.898034
+RUNNING SIMULATION with n_spikes 4 and sigma 3.62939388879
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 4 initial input spikes were fired
+Current time is: 2015-01-28 15:49:06.977869
+RUNNING SIMULATION with n_spikes 1 and sigma 0.0
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 0 initial input spikes were fired
+Current time is: 2015-01-28 15:52:04.616444
+RUNNING SIMULATION with n_spikes 4 and sigma 4.87820407527
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 4 initial input spikes were fired
+Current time is: 2015-01-28 15:55:02.330076
+RUNNING SIMULATION with n_spikes 70 and sigma 3
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 70 initial input spikes were fired
+Current time is: 2015-01-28 15:59:06.168864
+RUNNING SIMULATION with n_spikes 3 and sigma 1.35728487143
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 3 initial input spikes were fired
+Current time is: 2015-01-28 16:02:10.908457
+RUNNING SIMULATION with n_spikes 5 and sigma 2.51443830706
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 5 initial input spikes were fired
+Current time is: 2015-01-28 16:05:18.094773
+RUNNING SIMULATION with n_spikes 2 and sigma 3.95
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 2 initial input spikes were fired
+Current time is: 2015-01-28 16:08:19.196845
+RUNNING SIMULATION with n_spikes 1 and sigma 0.0
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 0 initial input spikes were fired
+Current time is: 2015-01-28 16:11:21.766846
+RUNNING SIMULATION with n_spikes 80 and sigma 3
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 80 initial input spikes were fired
+Current time is: 2015-01-28 16:14:55.500449
+RUNNING SIMULATION with n_spikes 6 and sigma 2.46080384337
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 6 initial input spikes were fired
+Current time is: 2015-01-28 16:17:56.032994
+RUNNING SIMULATION with n_spikes 3 and sigma 4.94660377319
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 3 initial input spikes were fired
+Current time is: 2015-01-28 16:21:03.300446
+RUNNING SIMULATION with n_spikes 8 and sigma 4.54640998481
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 8 initial input spikes were fired
+Current time is: 2015-01-28 16:24:18.118151
+RUNNING SIMULATION with n_spikes 4 and sigma 5.22416261232
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 4 initial input spikes were fired
+Current time is: 2015-01-28 16:27:18.292923
+RUNNING SIMULATION with n_spikes 90 and sigma 3
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 90 initial input spikes were fired
+Current time is: 2015-01-28 16:30:20.944290
+RUNNING SIMULATION with n_spikes 102 and sigma 1.67283288399
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 102 initial input spikes were fired
+Current time is: 2015-01-28 16:32:50.838356
+RUNNING SIMULATION with n_spikes 103 and sigma 1.5797497866
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 103 initial input spikes were fired
+Current time is: 2015-01-28 16:35:24.791491
+RUNNING SIMULATION with n_spikes 99 and sigma 0.979318845673
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 99 initial input spikes were fired
+Current time is: 2015-01-28 16:37:53.657345
+RUNNING SIMULATION with n_spikes 98 and sigma 0.918655850375
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 98 initial input spikes were fired
+Current time is: 2015-01-28 16:40:25.703209
+RUNNING SIMULATION with n_spikes 100 and sigma 3
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 100 initial input spikes were fired
+Current time is: 2015-01-28 16:43:25.692322
+RUNNING SIMULATION with n_spikes 5 and sigma 2.77661664621
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 5 initial input spikes were fired
+Current time is: 2015-01-28 16:46:28.640453
+RUNNING SIMULATION with n_spikes 5 and sigma 3.05260544453
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 5 initial input spikes were fired
+Current time is: 2015-01-28 16:49:24.380131
+RUNNING SIMULATION with n_spikes 6 and sigma 4.24372085164
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 6 initial input spikes were fired
+Current time is: 2015-01-28 16:52:33.443254
+RUNNING SIMULATION with n_spikes 8 and sigma 4.333589736
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 8 initial input spikes were fired
+Current time is: 2015-01-28 16:55:40.710924
+RUNNING SIMULATION with n_spikes 100 and sigma 0
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 100 initial input spikes were fired
+Current time is: 2015-01-28 16:58:04.356767
+RUNNING SIMULATION with n_spikes 97 and sigma 0.433399413413
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 97 initial input spikes were fired
+Current time is: 2015-01-28 17:00:38.268378
+RUNNING SIMULATION with n_spikes 99 and sigma 0.812788057294
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 99 initial input spikes were fired
+Current time is: 2015-01-28 17:03:11.726926
+RUNNING SIMULATION with n_spikes 98 and sigma 0.970650627449
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 98 initial input spikes were fired
+Current time is: 2015-01-28 17:05:47.977411
+RUNNING SIMULATION with n_spikes 96 and sigma 0.926743266281
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 96 initial input spikes were fired
+Current time is: 2015-01-28 17:08:15.605229
+RUNNING SIMULATION with n_spikes 100 and sigma 1
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 100 initial input spikes were fired
+Current time is: 2015-01-28 17:10:45.427846
+RUNNING SIMULATION with n_spikes 97 and sigma 1.04004014082
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 97 initial input spikes were fired
+Current time is: 2015-01-28 17:13:12.024329
+RUNNING SIMULATION with n_spikes 94 and sigma 0.34098358515
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 94 initial input spikes were fired
+Current time is: 2015-01-28 17:15:38.195371
+RUNNING SIMULATION with n_spikes 98 and sigma 0.778396883101
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 98 initial input spikes were fired
+Current time is: 2015-01-28 17:18:00.268760
+RUNNING SIMULATION with n_spikes 97 and sigma 0.692048272107
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 97 initial input spikes were fired
+Current time is: 2015-01-28 17:20:27.672016
+RUNNING SIMULATION with n_spikes 100 and sigma 2
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 100 initial input spikes were fired
+Current time is: 2015-01-28 17:23:06.831033
+RUNNING SIMULATION with n_spikes 99 and sigma 0.304484725171
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 99 initial input spikes were fired
+Current time is: 2015-01-28 17:25:39.577904
+RUNNING SIMULATION with n_spikes 93 and sigma 0.470498612524
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 93 initial input spikes were fired
+Current time is: 2015-01-28 17:28:06.717897
+RUNNING SIMULATION with n_spikes 100 and sigma 0.933258270791
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 100 initial input spikes were fired
+Current time is: 2015-01-28 17:30:40.297948
+RUNNING SIMULATION with n_spikes 95 and sigma 1.06896071411
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 95 initial input spikes were fired
+Current time is: 2015-01-28 17:33:13.221726
+RUNNING SIMULATION with n_spikes 100 and sigma 3
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 100 initial input spikes were fired
+Current time is: 2015-01-28 17:36:10.072683
+RUNNING SIMULATION with n_spikes 96 and sigma 0.944775013635
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 96 initial input spikes were fired
+Current time is: 2015-01-28 17:38:37.593018
+RUNNING SIMULATION with n_spikes 99 and sigma 0.790148246601
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 99 initial input spikes were fired
+Current time is: 2015-01-28 17:41:08.498578
+RUNNING SIMULATION with n_spikes 98 and sigma 0.80661829235
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 98 initial input spikes were fired
+Current time is: 2015-01-28 17:43:35.622844
+RUNNING SIMULATION with n_spikes 99 and sigma 0.551583597336
+Current timestep: 0.0
+Current timestep: 0.005
+Current timestep: 0.01
+Current timestep: 0.015
+Current timestep: 0.02
+Current timestep: 0.025
+Current timestep: 0.03
+Current timestep: 0.035
+Current timestep: 0.04
+Current timestep: 0.045
+Current timestep: 0.05
+Current timestep: 0.055
+Current timestep: 0.06
+Current timestep: 0.065
+In the last simulation, 99 initial input spikes were fired

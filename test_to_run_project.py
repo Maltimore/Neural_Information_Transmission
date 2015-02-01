@@ -196,7 +196,7 @@ def overallfunction(input_spikes1,sigma):
 
 startingvalues =    [[50,0]]
 simsteps=2
-repetitions = 5
+repetitions = 2
 
 def create_initial_output_vector(startingvalues, repetitions):
     outputvec = []    
@@ -230,19 +230,15 @@ def phase_plane_plot(startingvalues, simsteps):
      return Outputs
 
 
+
 startingvec                    = create_initial_output_vector(startingvalues, repetitions)
 Outputs                        = np.zeros((simsteps+1,2*len(startingvec)))
+
 
 Data                           = phase_plane_plot(startingvec, simsteps)
 
 ## plotting
-#ax = plt.axes()
 
-#for i in np.arange(0,number_startingvalues*2,2):
-
-#    arrowplot(Test[:,i:i+2])
-    
-#plt.show()
 
     ############### CODE TO FIND PARAMTERS ################################
     #test_timesteps = 200
