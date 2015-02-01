@@ -10,6 +10,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import sys
 import datetime
+import cPickle as pickle
 
 
 # Here I define that all output will be written to a history file
@@ -112,6 +113,11 @@ def overallfunction(input_spikes1,sigma):
             while ((current_timestep <= initial_spike_times[current_artificial_neuron]) \
             and (initial_spike_times[current_artificial_neuron] <= current_timestep + dt)):
                 
+                # check whether there were zero input neurons requested
+                # in that case, break this loop and go on simulating
+                if len(initial_spike_neurons) == 0: 
+                    break
+
                 initial_spike_neurons[current_artificial_neuron].fire()
                 if current_artificial_neuron < len(initial_spike_times)-1:
                     current_artificial_neuron += 1
@@ -141,7 +147,12 @@ def overallfunction(input_spikes1,sigma):
         
         if N_spikes == 0:
             print " ATTENTION! Zero input spikes were slected."
-            return 0, 0
+            # in case there were zero input neurons, we have to return an
+            # empty  neuron list, but one spike time. This is slightly
+            # unintuitive, but at the moment it has to be like this because
+            # a different function won't work otherwise.
+            # This one spike time is ignored anyways.
+            return [], [0]
         if synchronization == 0:
             initial_spike_times = np.zeros((N_spikes))
             return artificial_neuron_list, initial_spike_times
@@ -184,20 +195,22 @@ def overallfunction(input_spikes1,sigma):
     return spikes, std
 
 
-import cPickle as pickle
+startingvalues =    [[0,0], [50,0]]
+simsteps=2
+repetitions = 2
 
-startingvalues =    [[30,0], [40,0], [50,0], [60,0], [70,0], [80,0], [90,0], [100,0],
-                     [30,3], [40,3], [50,3], [60,3], [70,3], [80,3], [90,3], [100,3],
-                     [100,0],[100,1],[100,2],[100,3]]
-                    
-number_startingvalues = len(startingvalues)
-simsteps=5
-Outputs=np.zeros((simsteps+1,2*number_startingvalues))
+def create_initial_output_vector(startingvalues, repetitions):
+    outputvec = []    
+    for i in np.arange(len(startingvalues)):
+        for k in np.arange(repetitions):
+            outputvec.append(startingvalues[i])
+            
+    return outputvec
 
-def phase_plane_plot(simsteps):
+
+def phase_plane_plot(startingvalues, simsteps):
      k=0
      l=1
-     #for spikes_in, synch_in in [[60,0],[80,0],[100,0],[60,2],[80,2],[100,2]]:
      for spikes_in, synch_in in startingvalues:
 
          j=0
@@ -217,16 +230,15 @@ def phase_plane_plot(simsteps):
          l+=2
      return Outputs
 
-Test=phase_plane_plot(simsteps)
 
 
+startingvec                    = create_initial_output_vector(startingvalues, repetitions)
+Outputs                        = np.zeros((simsteps+1,2*len(startingvec)))
 
+
+Data                           = phase_plane_plot(startingvec, simsteps)
 
 ## plotting
-
-
-
-    
 
 
     ############### CODE TO FIND PARAMTERS ################################
@@ -316,7 +328,7 @@ Test=phase_plane_plot(simsteps)
 #    variable = []
 #    variable.append(variable2)
 
-import cPickle as pickle
 
 with open('simulation.txt','wb') as f:
-    pickle.dump(Test,f)
+    pickle.dump(repetitions,f)
+    pickle.dump(Data,f)

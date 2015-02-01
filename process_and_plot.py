@@ -17,7 +17,7 @@ def arrowplot(array):
     
 with open('simulation.txt','rb') as f:
     # number of trials per starting point
-    number = 5#pickle.load(f)  
+    number = pickle.load(f)  
     # data array
     data = pickle.load(f)
     
@@ -49,5 +49,5 @@ for i in np.arange(0,processeddata.shape[1],2):
 plt.xlabel(r'$\sigma$ [ms]')
 plt.ylabel('a [spikes]')
 plt.ylim(0,100)
-plt.xlim(0,sigmamax)
+plt.xlim(0,sigmamax+0.3)
 plt.show()
