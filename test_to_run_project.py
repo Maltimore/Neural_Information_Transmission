@@ -197,7 +197,7 @@ def overallfunction(input_spikes1,sigma):
 
 startingvalues =    [[0,0], [50,0]]
 simsteps=2
-repetitions = 5
+repetitions = 2
 
 def create_initial_output_vector(startingvalues, repetitions):
     outputvec = []    
