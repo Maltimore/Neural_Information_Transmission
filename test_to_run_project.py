@@ -66,8 +66,9 @@ def overallfunction(input_spikes1,sigma):
                 spiketimematrix[i][neuronlist[i].spiketime[j]/dt] = neuronlist[i].spiketime[j]*1000         
         
         i=N_groups-1
-        startcutoff=N_groups*0.005
-        endcutoff=startcutoff + 0.015
+        # ATTENTION! I NOW HARDCODED THE CUTOFF VALUES
+        startcutoff = 53
+        endcutoff   = 60
         
         hilf=spiketimematrix[(i)*N_per_group  :  (i+1)*N_per_group][:,startcutoff/dt:endcutoff/dt]
         hilf=np.reshape(hilf,(np.shape(hilf)[0]*np.shape(hilf)[1]))
@@ -175,19 +176,17 @@ def overallfunction(input_spikes1,sigma):
     artificial_neurons, initial_spike_times = get_artificial_neurons(neuronlist, N_per_group, input_synchronisation, input_spikes)
     volt_matrix = simulate(N_timesteps, neuronlist, artificial_neurons, initial_spike_times)
     
-#    plt.figure()
-#    plt.hist(initial_spike_times)
     
     # Plot Voltage for all simulated neurons
-#    plt.figure(figsize=(15,20))
-#    for i in np.arange(N_neurons):    
-#        plt.plot(np.linspace(0,N_timesteps*dt*1000,N_timesteps),volt_matrix[i], linewidth = my_linewidth)
-#    plt.xlabel('time [ms]')
-#    plt.ylabel('voltage [V]')
+    plt.figure(figsize=(15,20))
+    for i in np.arange(N_neurons):    
+        plt.plot(np.linspace(0,N_timesteps*dt*1000,N_timesteps),volt_matrix[i], linewidth = my_linewidth)
+    plt.xlabel('time [ms]')
+    plt.ylabel('voltage [V]')
     
     #a_out, sig_out=calculate_output_properties()
     
-    #rasterplot()
+    rasterplot()
     
     
     spikes, std = calculate_output_properties(neuronlist)
@@ -195,7 +194,7 @@ def overallfunction(input_spikes1,sigma):
     return spikes, std
 
 
-startingvalues =    [[0,0], [50,0]]
+startingvalues =    [[50,0]]
 simsteps=2
 repetitions = 5
 
