@@ -177,16 +177,16 @@ def overallfunction(input_spikes1,sigma):
     volt_matrix = simulate(N_timesteps, neuronlist, artificial_neurons, initial_spike_times)
     
     
-    # Plot Voltage for all simulated neurons
-    plt.figure(figsize=(15,20))
-    for i in np.arange(N_neurons):    
-        plt.plot(np.linspace(0,N_timesteps*dt*1000,N_timesteps),volt_matrix[i], linewidth = my_linewidth)
-    plt.xlabel('time [ms]')
-    plt.ylabel('voltage [V]')
-    
-    #a_out, sig_out=calculate_output_properties()
-    
-    rasterplot()
+#   # plot voltage for all simulated neurons
+#   plt.figure(figsize=(15,20))
+#   for i in np.arange(n_neurons):    
+#       plt.plot(np.linspace(0,n_timesteps*dt*1000,n_timesteps),volt_matrix[i], linewidth = my_linewidth)
+#   plt.xlabel('time [ms]')
+#   plt.ylabel('voltage [v]')
+#   
+#   #a_out, sig_out=calculate_output_properties()
+#   
+#   rasterplot()
     
     
     spikes, std = calculate_output_properties(neuronlist)
@@ -194,9 +194,10 @@ def overallfunction(input_spikes1,sigma):
     return spikes, std
 
 
-startingvalues =    [[50,0]]
-simsteps=2
-repetitions = 2
+startingvalues =    [[40,0], [50,0], [60,0], [70,0], 
+		     [50,3], [60,3], [70,3], [80,3]]
+simsteps     = 3
+repetitions  = 10
 
 def create_initial_output_vector(startingvalues, repetitions):
     outputvec = []    
