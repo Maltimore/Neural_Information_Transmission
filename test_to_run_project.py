@@ -219,24 +219,15 @@ def phase_plane_plot(simsteps):
 
 Test=phase_plane_plot(simsteps)
 
-def arrowplot(array):
-    for i in range(len(array)-1):
-        ax.arrow(array[i][1],array[i][0],array[i+1][1]-array[i][1],array[i+1][0]-array[i][0],fc='k',ec='k',\
-                 head_width=0.05, head_length=1, length_includes_head=True)
-    plt.xlabel(r'$\sigma$ [ms]')
-    plt.ylabel('a [spikes]')
-    plt.ylim(0,100)
-    plt.xlim(0,3)
+
 
 
 ## plotting
-ax = plt.axes()
 
-for i in np.arange(0,number_startingvalues*2,2):
 
-    arrowplot(Test[:,i:i+2])
+
     
-plt.show()
+
 
     ############### CODE TO FIND PARAMTERS ################################
     #test_timesteps = 200
