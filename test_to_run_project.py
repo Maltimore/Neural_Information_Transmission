@@ -67,8 +67,8 @@ def overallfunction(input_spikes1,sigma):
         
         i=N_groups-1
         # ATTENTION! I NOW HARDCODED THE CUTOFF VALUES
-        startcutoff = 53
-        endcutoff   = 60
+        startcutoff = 0.053
+        endcutoff   = 0.060
         
         hilf=spiketimematrix[(i)*N_per_group  :  (i+1)*N_per_group][:,startcutoff/dt:endcutoff/dt]
         hilf=np.reshape(hilf,(np.shape(hilf)[0]*np.shape(hilf)[1]))
@@ -194,10 +194,9 @@ def overallfunction(input_spikes1,sigma):
     return spikes, std
 
 
-startingvalues =    [[40,0], [50,0], [60,0], [70,0], 
-		     [50,3], [60,3], [70,3], [80,3]]
-simsteps     = 3
-repetitions  = 10
+startingvalues =    [[40,0]]
+simsteps     = 2
+repetitions  = 2
 
 def create_initial_output_vector(startingvalues, repetitions):
     outputvec = []    
