@@ -30,7 +30,7 @@ N_neurons   = N_per_group * N_groups
 my_linewidth = .2
 dt = .0001
 input_synchronisation = 0
-input_spikes = 50
+input_spikes = 70
 
 
 #####################################
@@ -188,3 +188,74 @@ plt.ylabel('voltage [v]')
    #a_out, sig_out=calculate_output_properties()
    
 rasterplot()
+
+#       
+########################################################################
+# Single voltage_plot PSP
+
+dt = .0001
+N_timesteps = 200
+
+voltage_vec2  = np.empty(N_timesteps)
+voltage_vec3 = np.empty(N_timesteps)
+
+neuron1 = model_neuron.Neuron(1,dt)
+neuron2 = model_neuron.Neuron(2,dt)
+neuron3 = model_neuron.Neuron(3,dt)
+
+neuron2.switch_noise_off()
+neuron2.set_voltage(-.07)
+neuron3.switch_noise_off()
+neuron3.set_voltage(-.07)
+neuron3.set_g_syn(5.45e-10)
+
+neuron1.set_output_connections([neuron2, neuron3])
+neuron1.fire()
+
+for i in np.arange(N_timesteps):
+    neuron2.update()
+    voltage_vec2[i] = neuron2.get_voltage()
+    neuron3.update()
+    voltage_vec3[i] = neuron3.get_voltage()
+
+# plot voltage for all simulated neurons
+plt.figure()
+plt.plot([0,N_timesteps*dt],[-.06989,-.06989], linewidth = 2, label= 'PSP .11 mV', color='r')
+plt.plot([0,N_timesteps*dt],[-.06986,-.06986], linewidth = 2, label= 'PSP .14 mV', color='b')
+plt.plot(np.linspace(0,N_timesteps*dt,num=len(voltage_vec2)), voltage_vec2,         color='b')
+plt.plot(np.linspace(0,N_timesteps*dt,num=len(voltage_vec3)), voltage_vec3,         color='r')
+plt.xlabel('time [s]')
+plt.ylabel('voltage [V]')
+plt.legend()
+plt.xlim(0,N_timesteps*dt)
+
+
+###############################################################################
+# A couple of noise plots
+
+dt = .0001
+N_timesteps = 200
+N_neurons = 20
+neuronlist = []
+
+voltage_mat  = np.empty((N_neurons, N_timesteps))
+
+for i in np.arange(N_neurons):
+    neuronlist.append(model_neuron.Neuron(i,dt))
+
+for i in np.arange(N_timesteps):
+    for idx, neuron in enumerate(neuronlist):
+        neuron.update()
+        voltage_mat[idx,i]= neuron.get_voltage()
+        
+        
+        
+# plot voltage for all simulated neurons
+plt.figure()    
+for i in np.arange(N_neurons):
+    plt.plot(np.linspace(0,N_timesteps*dt,num=len(voltage_vec2)), voltage_mat[i,:])
+
+plt.xlabel('time [s]')
+plt.ylabel('voltage [V]')
+plt.legend()
+plt.xlim(0,N_timesteps*dt)
