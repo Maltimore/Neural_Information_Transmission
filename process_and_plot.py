@@ -21,6 +21,8 @@ with open('simulation.txt','rb') as f:
     # data array
     data = pickle.load(f)
     
+#data[np.isnan(data)]=0
+    
 numberstartingpoints = data.shape[1]/(number*2)
 
 ## get empty array for the plot
