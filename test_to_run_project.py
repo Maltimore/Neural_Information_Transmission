@@ -59,43 +59,66 @@ def overallfunction(input_spikes1,sigma):
     
         
     #Calculate number of output spike and its variance
+#    def calculate_output_properties(neuronlist):
+#        spiketimematrix = np.zeros((N_neurons,N_timesteps))
+#        for i in range(N_neurons):
+#            for j in range(len(neuronlist[i].spiketime)):
+#                spiketimematrix[i][neuronlist[i].spiketime[j]/dt] = neuronlist[i].spiketime[j]*1000         
+#        
+#        i=N_groups-1
+#        # ATTENTION! I NOW HARDCODED THE CUTOFF VALUES
+#        startcutoff = 0.053
+#        endcutoff   = 0.060
+#        
+#        hilf=spiketimematrix[(i)*N_per_group  :  (i+1)*N_per_group][:,startcutoff/dt:endcutoff/dt]
+#        hilf=np.reshape(hilf,(np.shape(hilf)[0]*np.shape(hilf)[1]))
+#        hilf=hilf[hilf!=0.0]
+#        variance_in_group=(np.std(hilf))
+#        spikes_in_group=len(hilf)
+#        
+#       # return eventmatrix, spiketimematrix
+#        #Return last group properties
+#        return spikes_in_group, variance_in_group
+
     def calculate_output_properties(neuronlist):
-        spiketimematrix = np.zeros((N_neurons,N_timesteps))
-        for i in range(N_neurons):
-            for j in range(len(neuronlist[i].spiketime)):
-                spiketimematrix[i][neuronlist[i].spiketime[j]/dt] = neuronlist[i].spiketime[j]*1000         
-        
-        i=N_groups-1
-        # ATTENTION! I NOW HARDCODED THE CUTOFF VALUES
-        startcutoff = 0.053
-        endcutoff   = 0.060
-        
-        hilf=spiketimematrix[(i)*N_per_group  :  (i+1)*N_per_group][:,startcutoff/dt:endcutoff/dt]
-        hilf=np.reshape(hilf,(np.shape(hilf)[0]*np.shape(hilf)[1]))
-        hilf=hilf[hilf!=0.0]
-        variance_in_group=(np.std(hilf))
-        spikes_in_group=len(hilf)
-        
-       # return eventmatrix, spiketimematrix
-        #Return last group properties
-        return spikes_in_group, variance_in_group
     
-    def rasterplot():
-        fig = plt.figure()
-        spikes = np.zeros((N_neurons,N_timesteps))
+        spiketimematrix = np.zeros((N_neurons,N_timesteps))
+        
         for i in range(N_neurons):
+        
             for j in range(len(neuronlist[i].spiketime)):
-                spikes[i][j] = neuronlist[i].spiketime[j]*1000 
-                ax = plt.gca()
-        for ith, trial in enumerate(spikes):
-            plt.vlines(trial, ith + .5, ith + 1.5, color='k')
-            plt.ylim(.5, len(spikes) + .5) 
-        ax.invert_yaxis()
-        plt.title('Raster plot')
-        plt.xlabel('time [ms]')
-        plt.ylabel('number of neuron')
-        plt.xlim(0,70)
-        fig.show()
+            
+                spiketimematrix[i][neuronlist[i].spiketime[j]/dt] = neuronlist[i].spiketime[j]*1000
+            
+             
+            
+        spikes_in_group, variance_in_group = np.zeros(N_groups), np.zeros(N_groups)
+        
+        for i in range(N_groups):
+        
+            startcutoff = 0.005*i
+            
+            endcutoff = startcutoff + 0.020
+            
+            hilf=spiketimematrix[(i)*N_per_group : (i+1)*N_per_group][:,startcutoff/dt:endcutoff/dt]
+            
+            hilf=np.reshape(hilf,(np.shape(hilf)[0]*np.shape(hilf)[1]))
+            
+            hilf=hilf[hilf!=0.0]
+            
+            variance_in_group[i]=(np.std(hilf))
+            
+            spikes_in_group[i]=len(hilf)
+        
+         
+        
+        #Return last group properties
+        
+        return spikes_in_group, variance_in_group
+
+
+
+    
         
     def simulate(N_timesteps, neuronlist, initial_spike_neurons, initial_spike_times):
         N_neurons = len(neuronlist)
@@ -165,7 +188,7 @@ def overallfunction(input_spikes1,sigma):
             initial_spike_times = np.sort(initial_spike_times)
             return artificial_neuron_list, initial_spike_times
         
-    
+    ## plotting
      
     #####################################
     # Run simulation
@@ -176,27 +199,17 @@ def overallfunction(input_spikes1,sigma):
     artificial_neurons, initial_spike_times = get_artificial_neurons(neuronlist, N_per_group, input_synchronisation, input_spikes)
     volt_matrix = simulate(N_timesteps, neuronlist, artificial_neurons, initial_spike_times)
     
-    
-#   # plot voltage for all simulated neurons
-#   plt.figure(figsize=(15,20))
-#   for i in np.arange(n_neurons):    
-#       plt.plot(np.linspace(0,n_timesteps*dt*1000,n_timesteps),volt_matrix[i], linewidth = my_linewidth)
-#   plt.xlabel('time [ms]')
-#   plt.ylabel('voltage [v]')
-#   
-#   #a_out, sig_out=calculate_output_properties()
-#   
-#   rasterplot()
-    
+
     
     spikes, std = calculate_output_properties(neuronlist)
     
     return spikes, std
 
 
-startingvalues =    [[40,0]]
-simsteps     = 2
-repetitions  = 2
+startingvalues =    [[40,0], [50,0], [60,0], [80,0], [100,0],
+                             [50,3], [60,3], [80,3], [100,3]]
+
+repetitions  = 5
 
 def create_initial_output_vector(startingvalues, repetitions):
     outputvec = []    
@@ -207,125 +220,30 @@ def create_initial_output_vector(startingvalues, repetitions):
     return outputvec
 
 
-def phase_plane_plot(startingvalues, simsteps):
+def phase_plane_plot(startingvalues):
+     Outputs   = np.zeros((11,2*len(startingvec)))
+     
      k=0
      l=1
      for spikes_in, synch_in in startingvalues:
 
-         j=0
-         spikes_out, synch_out = spikes_in, synch_in
-         Outputs[0,k]= spikes_out
-         Outputs[0,l]= synch_out
-         for i in range(simsteps):
-            j+=1
-            spikes_out, synch_out= overallfunction(spikes_out,synch_out)
-            Outputs[j,k]=spikes_out
-            Outputs[j,l]= synch_out
+         Outputs[0,k]= spikes_in
+         Outputs[0,l]= synch_in
+         spikes_out, synch_out= overallfunction(spikes_in,synch_in)
+         
+         Outputs[1:,k]=spikes_out
+         Outputs[1:,l]= synch_out
 
-	 with open('Zwischenspeicherung.txt','wb') as f:
-	    pickle.dump(Outputs,f)
+         with open('Zwischenspeicherung.txt','wb') as f:
+             pickle.dump(Outputs,f)
 
          k+=2
          l+=2
      return Outputs
 
 
-
-startingvec                    = create_initial_output_vector(startingvalues, repetitions)
-Outputs                        = np.zeros((simsteps+1,2*len(startingvec)))
-
-
-Data                           = phase_plane_plot(startingvec, simsteps)
-
-## plotting
-
-
-    ############### CODE TO FIND PARAMTERS ################################
-    #test_timesteps = 200
-    #tau_syn_vec = np.linspace(.0001,.001,1000)
-    #g_syn_vec   = np.linspace(1e-10,1e-9,1000)
-    #maximum_time_vec = np.empty((len(tau_syn_vec)))
-    #maximum_volt_vec = np.empty((len(tau_syn_vec)))
-    #
-    #for i in np.arange(len(tau_syn_vec)):
-    #    neuron_A = model_neuron.Neuron(9998, dt)
-    #    neuron_A.switch_noise_off()
-    #    neuron_A.set_tau_syn(.0003315)
-    #    neuron_A.set_g_syn(g_syn_vec[i])
-    #    neuron_B = model_neuron.Neuron(9999, dt)
-    #    neuron_B.set_output_connections([neuron_A])
-    #    neuron_B.fire()
-    #    
-    #    voltagevec = np.empty((test_timesteps))
-    #    timescale  = np.arange(test_timesteps)
-    #    for j in timescale:
-    #        neuron_A.update()
-    #        voltagevec[j] = neuron_A.get_voltage()
-    #    
-    #    maximum_time_vec[i] = np.argmax(voltagevec) * dt * 1000 - 5
-    #    maximum_volt_vec[i] = np.amax(voltagevec) * 1000 + 70 # in mV
-    #
-    #
-    # 
-    #plt.figure()   
-    #plt.plot(g_syn_vec, maximum_volt_vec)
-    #plt.xlabel('g_syn')
-    #plt.ylabel('max_volt [mV]')
-    #
-    #
-    #neuron_A = model_neuron.Neuron(9998, dt)
-    #neuron_A.switch_noise_off()
-    #neuron_A.set_tau_syn(.0003315)
-    #neuron_A.set_g_syn(7e-10)
-    #neuron_B = model_neuron.Neuron(9999, dt)
-    #neuron_B.set_output_connections([neuron_A])
-    #neuron_B.fire()
-    #
-    #for j in timescale:
-    #    neuron_A.update()
-    #    voltagevec[j] = neuron_A.get_voltage()
-    #    
-    #plt.figure()
-    #ax = plt.gca()
-    #plt.plot(timescale * dt * 1000, voltagevec * 1000)
-    #ax.ticklabel_format(useOffset=False)
-    #plt.xlabel('time in [ms]')
-    #plt.ylabel('voltage in [mV]')
-    #
-    #N = 100000
-    ## find best I_mu
-    #I_mu = np.arange(2.7e-10,2.74e-10,1e-13)
-    #firing_rate = np.empty(len(I_mu))
-    #
-    #
-    #i = 0
-    #for I in I_mu:
-    #    testneuron = model_neuron.Neuron(0,dt)
-    #    testneuron.set_I_mu(I)
-    #    
-    #    for j in np.arange(N):
-    #        testneuron.update()
-    #    
-    #    firing_rate[i] = testneuron.get_firing_rate()
-    #    i += 1
-    #
-    #plt.figure()
-    #plt.plot(I_mu, firing_rate)
-    #plt.xlabel('I_mu [A]')
-    #plt.ylabel('Firing rate [Hz]')
-    
-    # delete all objects
-
-
-
-#if os.path.exists('simulation%s.txt'%simnr):
-#    with open('simulation%s.txt'%simnr,'rb') as f:
-#        variable=pickle.load(f)
-#        print variable
-#    variable.append(variable2)
-#else:
-#    variable = []
-#    variable.append(variable2)
+startingvec         = create_initial_output_vector(startingvalues, repetitions)
+Data                = phase_plane_plot(startingvec)
 
 
 with open('simulation.txt','wb') as f:

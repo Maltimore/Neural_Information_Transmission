@@ -26,7 +26,7 @@ class Neuron:
         'dt': dt,\
         'g_K_add_term': 5e-9\
         }
-        self.I_mu = 8.89e-11
+        self.I_mu = 8.86e-11
         self.sigma = 1e-7
         self.tau_noise = .005
         self.postsynaptic_neurons = []

@@ -259,3 +259,104 @@ plt.xlabel('time [s]')
 plt.ylabel('voltage [V]')
 plt.legend()
 plt.xlim(0,N_timesteps*dt)
+
+
+
+    ############### CODE TO FIND PARAMTERS ################################
+    #test_timesteps = 200
+    #tau_syn_vec = np.linspace(.0001,.001,1000)
+    #g_syn_vec   = np.linspace(1e-10,1e-9,1000)
+    #maximum_time_vec = np.empty((len(tau_syn_vec)))
+    #maximum_volt_vec = np.empty((len(tau_syn_vec)))
+    #
+    #for i in np.arange(len(tau_syn_vec)):
+    #    neuron_A = model_neuron.Neuron(9998, dt)
+    #    neuron_A.switch_noise_off()
+    #    neuron_A.set_tau_syn(.0003315)
+    #    neuron_A.set_g_syn(g_syn_vec[i])
+    #    neuron_B = model_neuron.Neuron(9999, dt)
+    #    neuron_B.set_output_connections([neuron_A])
+    #    neuron_B.fire()
+    #    
+    #    voltagevec = np.empty((test_timesteps))
+    #    timescale  = np.arange(test_timesteps)
+    #    for j in timescale:
+    #        neuron_A.update()
+    #        voltagevec[j] = neuron_A.get_voltage()
+    #    
+    #    maximum_time_vec[i] = np.argmax(voltagevec) * dt * 1000 - 5
+    #    maximum_volt_vec[i] = np.amax(voltagevec) * 1000 + 70 # in mV
+    #
+    #
+    # 
+    #plt.figure()   
+    #plt.plot(g_syn_vec, maximum_volt_vec)
+    #plt.xlabel('g_syn')
+    #plt.ylabel('max_volt [mV]')
+    #
+    #
+    #neuron_A = model_neuron.Neuron(9998, dt)
+    #neuron_A.switch_noise_off()
+    #neuron_A.set_tau_syn(.0003315)
+
+
+
+#if os.path.exists('simulation%s.txt'%simnr):
+#    with open('simulation%s.txt'%simnr,'rb') as f:
+#        variable=pickle.load(f)
+#        print variable
+#    variable.append(variable2)
+#else:
+#    variable = []
+#    variable.append(variable2)
+
+    #neuron_A.set_g_syn(7e-10)
+    #neuron_B = model_neuron.Neuron(9999, dt)
+    #neuron_B.set_output_connections([neuron_A])
+    #neuron_B.fire()
+    #
+    #for j in timescale:
+    #    neuron_A.update()
+    #    voltagevec[j] = neuron_A.get_voltage()
+    #    
+    #plt.figure()
+    #ax = plt.gca()
+    #plt.plot(timescale * dt * 1000, voltagevec * 1000)
+    #ax.ticklabel_format(useOffset=False)
+    #plt.xlabel('time in [ms]')
+    #plt.ylabel('voltage in [mV]')
+    #
+    #N = 100000
+    ## find best I_mu
+    #I_mu = np.arange(2.7e-10,2.74e-10,1e-13)
+    #firing_rate = np.empty(len(I_mu))
+    #
+    #
+    #i = 0
+    #for I in I_mu:
+    #    testneuron = model_neuron.Neuron(0,dt)
+    #    testneuron.set_I_mu(I)
+    #    
+    #    for j in np.arange(N):
+    #        testneuron.update()
+    #    
+    #    firing_rate[i] = testneuron.get_firing_rate()
+    #    i += 1
+    #
+    #plt.figure()
+    #plt.plot(I_mu, firing_rate)
+    #plt.xlabel('I_mu [A]')
+    #plt.ylabel('Firing rate [Hz]')
+    
+    # delete all objects
+
+
+
+#if os.path.exists('simulation%s.txt'%simnr):
+#    with open('simulation%s.txt'%simnr,'rb') as f:
+#        variable=pickle.load(f)
+#        print variable
+#    variable.append(variable2)
+#else:
+#    variable = []
+#    variable.append(variable2)
