@@ -207,9 +207,10 @@ def overallfunction(input_spikes1,sigma):
 
 
 startingvalues =    [[40,0], [50,0], [60,0], [80,0], [100,0],
-                             [50,3], [60,3], [80,3], [100,3]]
+                     [40,3], [50,3], [60,3], [80,3], [100,3],
+                     [100,.5],[100,1],[100,1.5][100,2],[100,2.5]]
 
-repetitions  = 5
+repetitions  = 200
 
 def create_initial_output_vector(startingvalues, repetitions):
     outputvec = []    
