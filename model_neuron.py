@@ -16,7 +16,7 @@ class Neuron:
         'tau_m': .01,\
         'tau_syn': 0.000335,\
         'R_m': 10e7,\
-        'g_max': 6.99e-10,\
+        'g_max': 6.9e-10,\
         'g_K': 0,\
         'E_K': -.077,\
         'E_syn': 0,\
@@ -26,7 +26,7 @@ class Neuron:
         'dt': dt,\
         'g_K_add_term': 5e-9\
         }
-        self.I_mu = 8.89e-11
+        self.I_mu = 8.86e-11
         self.sigma = 1e-7
         self.tau_noise = .005
         self.postsynaptic_neurons = []
@@ -138,7 +138,11 @@ class Neuron:
             index = self.input_neuron_numbers.index(ext_neuron_number)
             self.synapse_list[index].start()
             
-            
+    
+    def set_voltage(self, V):
+        self.params['V'] = V
+
+        
     def get_output_connections(self):
         return self.postsynaptic_neurons
         
