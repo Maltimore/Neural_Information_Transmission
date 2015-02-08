@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2014.3.30)  5 FEB 2015 13:49
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2014.3.30)  6 FEB 2015 20:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -430,6 +430,10 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
+(c:/texlive/2013/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
 (c:/texlive/2013/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
@@ -678,12 +682,12 @@ Package: l3skip 2013/01/13 v4444 L3 Dimensions and skips
 \l_tmpb_skip=\skip93
 \g_tmpa_skip=\skip94
 \g_tmpb_skip=\skip95
-\c_zero_muskip=\muskip11
-\c_max_muskip=\muskip12
-\l_tmpa_muskip=\muskip13
-\l_tmpb_muskip=\muskip14
-\g_tmpa_muskip=\muskip15
-\g_tmpb_muskip=\muskip16
+\c_zero_muskip=\muskip12
+\c_max_muskip=\muskip13
+\l_tmpa_muskip=\muskip14
+\l_tmpb_muskip=\muskip15
+\g_tmpa_muskip=\muskip16
+\g_tmpb_muskip=\muskip17
 )
 (c:/texlive/2013/texmf-dist/tex/latex/l3kernel/l3keys.sty
 Package: l3keys 2013/02/24 v4461 L3 Experimental key-value interfaces
@@ -964,18 +968,18 @@ Package: translator 2010/06/12 ver 1.10
 pings.tex))) (./Documentation_InfTrans.aux)
 \openout1 = `Documentation_InfTrans.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
 
 (c:/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1075,102 +1079,122 @@ Dictionary: translator-basic-dictionary, Language: English
 File: siunitx-abbreviations.cfg 2013/03/11 v2.5q siunitx: Abbreviated units
 )
 \c__siunitx_mathsf_int=\count161
-LaTeX Font Info:    Try loading font information for U+msa on input line 23.
+LaTeX Font Info:    Try loading font information for U+msa on input line 24.
 (c:/texlive/2013/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 23.
+LaTeX Font Info:    Try loading font information for U+msb on input line 24.
 
 (c:/texlive/2013/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 \c__siunitx_mathtt_int=\count162
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 26.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 29.
 
 (c:/texlive/2013/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 54.
+) [1
+
+
+{c:/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 54.
+
+(c:/texlive/2013/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+) [2]
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 71.
 
 (c:/texlive/2013/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-! Extra }, or forgotten \endgroup.
-l.60      \ Membrane resistance}
-                                
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-Overfull \hbox (15.56508pt too wide) in paragraph at lines 75--79
-\T1/cmr/m/n/12 Background ac-tiv-ity is in-tro-duced via a noise ob-ject, that 
-com-putes Ornstein-Uhlenbeck-
- []
-
-[1{c:/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-
-]
-<./Plots/Our_Plots/noise.png, id=18, 578.16pt x 433.62pt>
+) [3]
+<./Plots/Our_Plots/noise.png, id=31, 578.16pt x 433.62pt>
 File: ./Plots/Our_Plots/noise.png Graphic file (type png)
 
 <use ./Plots/Our_Plots/noise.png>
-Package pdftex.def Info: ./Plots/Our_Plots/noise.png used on input line 88.
-(pdftex.def)             Requested size: 301.36676pt x 226.01964pt.
+Package pdftex.def Info: ./Plots/Our_Plots/noise.png used on input line 103.
+(pdftex.def)             Requested size: 239.00298pt x 179.24759pt.
 
-<./Plots/Our_Plots/PSP.png, id=20, 578.16pt x 433.62pt>
+<./Plots/Our_Plots/PSP.png, id=33, 578.16pt x 433.62pt>
 File: ./Plots/Our_Plots/PSP.png Graphic file (type png)
 
 <use ./Plots/Our_Plots/PSP.png>
-Package pdftex.def Info: ./Plots/Our_Plots/PSP.png used on input line 95.
-(pdftex.def)             Requested size: 301.36676pt x 226.01964pt.
+Package pdftex.def Info: ./Plots/Our_Plots/PSP.png used on input line 112.
+(pdftex.def)             Requested size: 239.00298pt x 179.24759pt.
 
-<./Plots/Our_Plots/voltageplot.png, id=21, 977.8131pt x 796.4154pt>
+Overfull \hbox (50.0906pt too wide) in paragraph at lines 101--116
+[]$[]$  $[]$ 
+ []
+
+<./Plots/Our_Plots/voltageplot.png, id=34, 977.8131pt x 796.4154pt>
 File: ./Plots/Our_Plots/voltageplot.png Graphic file (type png)
 
 <use ./Plots/Our_Plots/voltageplot.png>
 Package pdftex.def Info: ./Plots/Our_Plots/voltageplot.png used on input line 1
-02.
+21.
 (pdftex.def)             Requested size: 430.52583pt x 350.66692pt.
 
-<./Plots/Our_Plots/rasterplot.png, id=22, 914.9382pt x 732.0951pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4 <./Plots/Our_Plots/noise.png> <./Plots/Our_Plots/PSP.png>]
+<./Plots/Our_Plots/rasterplot.png, id=41, 914.9382pt x 732.0951pt>
 File: ./Plots/Our_Plots/rasterplot.png Graphic file (type png)
 
 <use ./Plots/Our_Plots/rasterplot.png>
-Package pdftex.def Info: ./Plots/Our_Plots/rasterplot.png used on input line 10
-9.
-(pdftex.def)             Requested size: 301.36676pt x 241.1453pt.
- [2 <./Plots/Our_Plots/noise.png>]
-[3 <./Plots/Our_Plots/PSP.png> <./Plots/Our_Plots/voltageplot.png>] [4 <./Plots
-/Our_Plots/rasterplot.png>] (./Documentation_InfTrans.aux) ) 
-Here is how much of TeX's memory you used:
- 14864 strings out of 493315
- 295714 string characters out of 6141455
- 324650 words of memory out of 5000000
- 18059 multiletter control sequences out of 15000+600000
- 18883 words of font info for 54 fonts, out of 8000000 for 9000
- 957 hyphenation exceptions out of 8191
- 54i,11n,48p,378b,656s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2013/te
-xmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2013/texmf-dist/f
-onts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2013/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmmi8.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr12.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
-><c:/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texliv
-e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2013/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2013/texmf-dist/f
-onts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2013/texmf-dist/fonts/type1
-/public/cm-super/sfrm1200.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/cm
--super/sfsl1200.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfs
-x1440.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb>
+Package pdftex.def Info: ./Plots/Our_Plots/rasterplot.png used on input line 13
+2.
+(pdftex.def)             Requested size: 233.3125pt x 186.68736pt.
 
-Output written on Documentation_InfTrans.pdf (4 pages, 1815778 bytes).
+<./Plots/Our_Plots/asynchronization_rasterplot.png, id=42, 578.16pt x 433.62pt>
+File: ./Plots/Our_Plots/asynchronization_rasterplot.png Graphic file (type png)
+
+<use ./Plots/Our_Plots/asynchronization_rasterplot.png>
+Package pdftex.def Info: ./Plots/Our_Plots/asynchronization_rasterplot.png used
+ on input line 141.
+(pdftex.def)             Requested size: 233.3125pt x 174.97995pt.
+
+Overfull \hbox (38.70966pt too wide) in paragraph at lines 129--145
+[]$[]$  $[]$ 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5 <./Plots/Our_Plots/voltageplot.png>] [6 <./Plots/Our_Plots/rasterplot.png> 
+<./Plots/Our_Plots/asynchronization_rasterplot.png>] (./Documentation_InfTrans.
+aux) ) 
+Here is how much of TeX's memory you used:
+ 15010 strings out of 493315
+ 298153 string characters out of 6141455
+ 324735 words of memory out of 5000000
+ 18188 multiletter control sequences out of 15000+600000
+ 28303 words of font info for 84 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 54i,11n,48p,757b,626s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2013/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/
+texlive/2013/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2
+013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2013/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2013/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2013/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr12.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r6.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/
+texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2
+013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2013/texmf-
+dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2013/texmf-dist/fonts
+/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2013/texmf-dist/fonts/type1/pub
+lic/cm-super/sfrm1000.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/cm-sup
+er/sfrm1095.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfrm120
+0.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/
+texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/20
+13/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb><c:/texlive/2013/texmf-d
+ist/fonts/type1/public/cm-super/sfsx1440.pfb><c:/texlive/2013/texmf-dist/fonts/
+type1/public/cm-super/sfsx1728.pfb><c:/texlive/2013/texmf-dist/fonts/type1/publ
+ic/cm-super/sfsx2488.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/cm-supe
+r/sftt1000.pfb>
+Output written on Documentation_InfTrans.pdf (6 pages, 1949770 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 122 PDF objects out of 1000 (max. 8388607)
+ 82 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
