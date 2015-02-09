@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2014.3.30)  6 FEB 2015 20:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2014.3.30)  9 FEB 2015 16:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -81,12 +81,12 @@ Package scrextend Info: Switching compatibility level to `first'.
 \ta@temp=\skip44
 Package typearea Info: These are the values describing the layout:
 (typearea)             DIV  = 12
-(typearea)             BCOR = 23.47351pt
+(typearea)             BCOR = 0.0pt
 (typearea)             \paperwidth      = 597.50793pt
-(typearea)              \textwidth      = 430.52583pt
-(typearea)              DIV departure   = -2%
-(typearea)              \evensidemargin = 23.4024pt
-(typearea)              \oddsidemargin  = -0.96028pt
+(typearea)              \textwidth      = 448.13095pt
+(typearea)              DIV departure   = -6%
+(typearea)              \evensidemargin = 2.4185pt
+(typearea)              \oddsidemargin  = 2.4185pt
 (typearea)             \paperheight     = 845.04694pt
 (typearea)              \textheight     = 635.5pt
 (typearea)              \topmargin      = -41.72441pt
@@ -1089,7 +1089,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 24.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 \c__siunitx_mathtt_int=\count162
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 29.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 30.
 
 (c:/texlive/2013/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
@@ -1097,104 +1097,96 @@ File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 
 
 {c:/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 54.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 37.
 
 (c:/texlive/2013/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 ) [2]
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 71.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 80.
 
 (c:/texlive/2013/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-) [3]
-<./Plots/Our_Plots/noise.png, id=31, 578.16pt x 433.62pt>
-File: ./Plots/Our_Plots/noise.png Graphic file (type png)
+)
+<./Plots/Our_Plots/noise_grosse_schrift.png, id=24, 578.16pt x 433.62pt>
+File: ./Plots/Our_Plots/noise_grosse_schrift.png Graphic file (type png)
 
-<use ./Plots/Our_Plots/noise.png>
-Package pdftex.def Info: ./Plots/Our_Plots/noise.png used on input line 103.
-(pdftex.def)             Requested size: 239.00298pt x 179.24759pt.
-
-<./Plots/Our_Plots/PSP.png, id=33, 578.16pt x 433.62pt>
-File: ./Plots/Our_Plots/PSP.png Graphic file (type png)
-
-<use ./Plots/Our_Plots/PSP.png>
-Package pdftex.def Info: ./Plots/Our_Plots/PSP.png used on input line 112.
-(pdftex.def)             Requested size: 239.00298pt x 179.24759pt.
-
-Overfull \hbox (50.0906pt too wide) in paragraph at lines 101--116
-[]$[]$  $[]$ 
- []
-
-<./Plots/Our_Plots/voltageplot.png, id=34, 977.8131pt x 796.4154pt>
+<use ./Plots/Our_Plots/noise_grosse_schrift.png>
+Package pdftex.def Info: ./Plots/Our_Plots/noise_grosse_schrift.png used on inp
+ut line 101.
+(pdftex.def)             Requested size: 358.50612pt x 268.8747pt.
+ [3] [4 <./Plots/Our_Plots/noise_grosse_schrift.png>]
+<./Plots/Our_Plots/voltageplot.png, id=38, 977.8131pt x 796.4154pt>
 File: ./Plots/Our_Plots/voltageplot.png Graphic file (type png)
 
 <use ./Plots/Our_Plots/voltageplot.png>
 Package pdftex.def Info: ./Plots/Our_Plots/voltageplot.png used on input line 1
-21.
-(pdftex.def)             Requested size: 430.52583pt x 350.66692pt.
+20.
+(pdftex.def)             Requested size: 403.31511pt x 328.5011pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+<./Plots/Our_Plots/rasterplot_grosse_schrift.png, id=39, 844.1136pt x 661.9932p
+t>
+File: ./Plots/Our_Plots/rasterplot_grosse_schrift.png Graphic file (type png)
+ <use ./Plots/Our_Plots/rasterplot_grosse_schrift.png>
+Package pdftex.def Info: ./Plots/Our_Plots/rasterplot_grosse_schrift.png used o
+n input line 131.
+(pdftex.def)             Requested size: 233.3125pt x 182.97295pt.
 
- [4 <./Plots/Our_Plots/noise.png> <./Plots/Our_Plots/PSP.png>]
-<./Plots/Our_Plots/rasterplot.png, id=41, 914.9382pt x 732.0951pt>
-File: ./Plots/Our_Plots/rasterplot.png Graphic file (type png)
-
-<use ./Plots/Our_Plots/rasterplot.png>
-Package pdftex.def Info: ./Plots/Our_Plots/rasterplot.png used on input line 13
-2.
-(pdftex.def)             Requested size: 233.3125pt x 186.68736pt.
-
-<./Plots/Our_Plots/asynchronization_rasterplot.png, id=42, 578.16pt x 433.62pt>
+<./Plots/Our_Plots/asynchronization_rasterplot.png, id=40, 578.16pt x 433.62pt>
 File: ./Plots/Our_Plots/asynchronization_rasterplot.png Graphic file (type png)
 
 <use ./Plots/Our_Plots/asynchronization_rasterplot.png>
 Package pdftex.def Info: ./Plots/Our_Plots/asynchronization_rasterplot.png used
- on input line 141.
+ on input line 140.
 (pdftex.def)             Requested size: 233.3125pt x 174.97995pt.
 
-Overfull \hbox (38.70966pt too wide) in paragraph at lines 129--145
+Overfull \hbox (21.10454pt too wide) in paragraph at lines 128--144
 []$[]$  $[]$ 
  []
 
+<./Plots/Our_Plots/Phase_plane.png, id=41, 578.16pt x 433.62pt>
+File: ./Plots/Our_Plots/Phase_plane.png Graphic file (type png)
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5 <./Plots/Our_Plots/voltageplot.png>] [6 <./Plots/Our_Plots/rasterplot.png> 
-<./Plots/Our_Plots/asynchronization_rasterplot.png>] (./Documentation_InfTrans.
-aux) ) 
+<use ./Plots/Our_Plots/Phase_plane.png>
+Package pdftex.def Info: ./Plots/Our_Plots/Phase_plane.png used on input line 1
+47.
+(pdftex.def)             Requested size: 412.27965pt x 309.2089pt.
+ [5 <./Plots/Our_Plots/voltageplot.png>] [6 <./Plots/Our_Plots/Phase_plane.png>
+ <./Plots/Our_Plots/rasterplot_grosse_schrift.png> <./Plots/Our_Plots/asynchron
+ization_rasterplot.png>] [7]
+(./Documentation_InfTrans.aux) ) 
 Here is how much of TeX's memory you used:
- 15010 strings out of 493315
- 298153 string characters out of 6141455
- 324735 words of memory out of 5000000
- 18188 multiletter control sequences out of 15000+600000
+ 15005 strings out of 493315
+ 298334 string characters out of 6141455
+ 326683 words of memory out of 5000000
+ 18185 multiletter control sequences out of 15000+600000
  28303 words of font info for 84 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 54i,11n,48p,757b,626s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2013/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/
-texlive/2013/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2
-013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2013/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2013/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2013/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr10.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr12.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r6.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/
-texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2
-013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2013/texmf-
-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2013/texmf-dist/fonts
-/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2013/texmf-dist/fonts/type1/pub
-lic/cm-super/sfrm1000.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/cm-sup
-er/sfrm1095.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfrm120
-0.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/
-texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/20
-13/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb><c:/texlive/2013/texmf-d
-ist/fonts/type1/public/cm-super/sfsx1440.pfb><c:/texlive/2013/texmf-dist/fonts/
-type1/public/cm-super/sfsx1728.pfb><c:/texlive/2013/texmf-dist/fonts/type1/publ
-ic/cm-super/sfsx2488.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/cm-supe
-r/sftt1000.pfb>
-Output written on Documentation_InfTrans.pdf (6 pages, 1949770 bytes).
+ 54i,11n,48p,1106b,624s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2013/texmf-dist/fonts/enc/dvips/cm-
+super/cm-super-t1.enc}{c:/texlive/2013/texmf-dist/fonts/enc/dvips/cm-super/cm-s
+uper-ts1.enc}<c:/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.
+pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/t
+exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/201
+3/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2013/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2013/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr8.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.p
+fb><c:/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/tex
+live/2013/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2013/
+texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2013/texmf-dist
+/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2013/texmf-dist/fonts/typ
+e1/public/cm-super/sfrm1200.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/
+cm-super/sfrm1728.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/cm-super/s
+fsl1200.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pf
+b><c:/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb><c:/texl
+ive/2013/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb><c:/texlive/2013/t
+exmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb><c:/texlive/2013/texmf-dist/
+fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on Documentation_InfTrans.pdf (7 pages, 2000970 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
- 82 compressed objects within 1 object stream
+ 127 PDF objects out of 1000 (max. 8388607)
+ 86 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
